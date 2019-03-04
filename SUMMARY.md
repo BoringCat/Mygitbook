@@ -1,0 +1,26 @@
+# Table of contents
+
+* [MyLog](README.md)
+* [折腾小米路由器](mirother/README.md)
+  * [小米路由器2 VLAN的配置](mirother/MiRother2_Vlan_wiki.md)
+  * [折腾小米路由器2 VLAN的记录](mirother/MiRother2_Vlan_Story.md)
+* [搞LEDE](lede/README.md)
+  * [LEDE编译的问题与解决方案](lede/Make-problem/Problem.md)
+  * [如何在路由器上跑MentoHUST](lede/Common_options/ForSchoolUseRuijie.md)
+  * [LEDE路由器上SS + 透明代理](lede/Common_options/ShadowSockOnLEDE.md)
+  * [基于OpenWrt/LEDE的PXE网络启动](lede/Common_options/PXEBoot.md)
+  * [在OpenWrt/LEDE设置静态物网络地址转换](lede/Common_options/StaticNat.md)
+  * [OpenWrt/LEDE路由器上v2ray + 透明代理](lede/Common_options/v2rayOnOpenwrt.md)
+
+* [日交换机](switch/README.md)
+  * [希力可WEB网管交换机VLAN配置](switch/siri-switch/web_managed.md)
+  * [通过交换机的镜像功能抓包](switch/universal/GetPackageByMonitor.md)
+  * [启用交换机的日记备份并用 rsyslog 接收](switch/universal/LogServer-linux.md)
+* [搞手机](phone/README.md)
+  * [取消Miui9的 /data 分区加密](phone/Mi5-Miui9-SDK24/DisableEncryption.md)
+  * [在MIUI9上面安装Magisk和使用systemless-Xposed](phone/Mi5-Miui9-SDK24/UseMagiskXposed.md)
+* [搞运维](linux/README.md)
+  * [基于 Depian 9 调整磁盘大小及其上面的LVM](linux/Resize_disk_and_LVM.md)
+* [Win出问题日常](windows/README.md)
+  * [文件历史记录备份不工作的问题](windows/FileHistory_not_work.md)
+  
