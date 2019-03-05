@@ -14,7 +14,8 @@
   DHCPv6服务器地址：2001::666/64
 
 ## 2. 配置
-1. 核心设备  
+1. 核心设备
+
 ```
 Ruijie>en
 
@@ -33,7 +34,8 @@ Ruijie(config-if-VLAN 100)#ipv6 dhcp relay destination 2001::666 VLAN 10
 Ruijie(config-if-VLAN 100)#end
 Ruijie#
 ```
-2. 服务器
+
+1. 服务器
    1. 设置网卡，添加地址：`2001::666/64`，网关：`2001::1`
    2. 安装软件包 `isc-dhcp-server`
    3. 配置文件 `/etc/dhcp/dhcpd6.conf`
