@@ -12,6 +12,7 @@
         "-lunr",
         "theme-default",
         "anchors",
-        "-anchor-navigation-ex"
+        "-anchor-navigation-ex",
+        "expandable-chapters"
     ]
 }
