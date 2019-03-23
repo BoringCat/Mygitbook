@@ -1,0 +1,17 @@
+{
+    "title": "MyLog",
+    "description": "我的经验与记录",
+    "author": "BoringCat",
+    "language": "zh-hans",
+    "root": ".",
+    "plugins": [
+        "highlight",
+        "-search",
+        "-sharing",
+        "-fontsettings",
+        "-lunr",
+        "theme-default",
+        "anchors",
+        "-anchor-navigation-ex"
+    ]
+}
