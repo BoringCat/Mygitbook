@@ -1,10 +1,14 @@
 ## 在路由器上跑MentoHUST
 **备忘录**  
 #### 编译与安装
-1. 在Git上拉[MentoHUST-OpenWrt-ipk](https://github.com/KyleRicardo/MentoHUST-OpenWrt-ipk)代码 (原文)  
+1. 在Git上拉[MentoHUST-OpenWrt-ipk](https://github.com/BoringCat/MentoHUST-OpenWrt-ipk)代码
 ```
 pushd package
-git clone https://github.com/KyleRicardo/MentoHUST-OpenWrt-ipk.git
+git clone https://github.com/BoringCat/MentoHUST-OpenWrt-ipk.git
+pushd MentoHUST-OpenWrt-ipk
+git checkout OpenWRT-18+ # 如果你是OpenWrt18+，这个分支修复了找不到libpcap.a的错误
+git checkout LEDE-17+ # 未测试
+popd
 popd
 ```
 2. （可选）在Git上拉[luci-app-mentohust](https://github.com/BoringCat/luci-app-mentohust)代码  
