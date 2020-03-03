@@ -46,15 +46,15 @@
    ```
 
    现在假设有以下机器，给出机器可以执行的命令：
-   
-   ||manager|webserver_proxy|webserver_tomcat1|db_data|db_config|db_logs|
-   |-:|:-:|:-:|:-:|:-:|:-:|:-:|
-   |cmd|✔|✔|✔|✔|✔|✔|
-   |nginx|❌|✔|✔|❌|❌|❌|
-   |apache2|❌|✔|✔|❌|❌|❌|
-   |caddy|❌|✔|✔|❌|❌|❌|
-   |mysql|❌|❌|❌|✔|✔|✔|
-   |mongodb|❌|❌|❌|✔|✔|✔|
+
+|         | manager | webserver_proxy | webserver_tomcat1 | db_data | db_config | db_logs |
+|--------:|:-------:|:---------------:|:-----------------:|:-------:|:---------:|:-------:|
+|     cmd |    ✔    |        ✔        |         ✔         |    ✔    |     ✔     |    ✔    |
+|   nginx |    ❌    |        ✔        |         ✔         |    ❌    |     ❌     |    ❌    |
+| apache2 |    ❌    |        ✔        |         ✔         |    ❌    |     ❌     |    ❌    |
+|   caddy |    ❌    |        ✔        |         ✔         |    ❌    |     ❌     |    ❌    |
+|   mysql |    ❌    |        ❌        |         ❌         |    ✔    |     ✔     |    ✔    |
+| mongodb |    ❌    |        ❌        |         ❌         |    ✔    |     ✔     |    ✔    |
 
    这样子就避免了手贱执行 `salt '*' state.sls mysql.install` 的时候帮所有机子装上mysql了
 
