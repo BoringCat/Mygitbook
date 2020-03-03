@@ -46,6 +46,7 @@
    ```
 
    现在假设有以下机器，给出机器可以执行的命令：
+   
    ||manager|webserver_proxy|webserver_tomcat1|db_data|db_config|db_logs|
    |-:|:-:|:-:|:-:|:-:|:-:|:-:|
    |cmd|✔|✔|✔|✔|✔|✔|
