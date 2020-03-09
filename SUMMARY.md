@@ -22,6 +22,7 @@
   * [在MIUI9上面安装Magisk和使用systemless-Xposed](phone/Mi5-Miui9-SDK24/UseMagiskXposed.md)
 * [搞运维](linux/README.md)
   * [基于 Depian 9 调整磁盘大小及其上面的LVM](linux/Resize_disk_and_LVM.md)
+  * [SSH Config 常用配置翻译](linux/SSH_Config.md)
   * [SaltStack 自动化运维](linux/SaltStack/README.md)
     * [对SaltStack state.sls的理解](linux/SaltStack/state_sls_simple.md)
 * [Win出问题日常](windows/README.md)
