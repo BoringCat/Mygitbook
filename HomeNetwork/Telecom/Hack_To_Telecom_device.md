@@ -34,4 +34,4 @@
 6. 通过获得的密码登录
 
 ## 一键破解？
-[小哥哥小姐姐快来点我啊，点一下玩一秒，坐牢坐到天荒地老](hack_telecom.py)
+<a href="hack_telecom.py" download target="_blank">小哥哥小姐姐快来点我啊，点一下玩一秒，坐牢坐到天荒地老</a>
