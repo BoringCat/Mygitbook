@@ -1,9 +1,10 @@
 # Table of contents
 
 * [MyLog](README.md)
-* [折腾小米路由器](mirother/README.md)
-  * [小米路由器2 VLAN的配置](mirother/MiRother2_Vlan_wiki.md)
-  * [折腾小米路由器2 VLAN的记录](mirother/MiRother2_Vlan_Story.md)
+* [折腾小米路由器](HomeNetwork/mirother/README.md)
+  * [小米路由器2 VLAN的配置](HomeNetwork/mirother/MiRother2_Vlan_wiki.md)
+  * [折腾小米路由器2 VLAN的记录](HomeNetwork/mirother/MiRother2_Vlan_Story.md)
+* [电信天翼宽带家庭网关破解](HomeNetwork/Telecom/Hack_To_Telecom_device.md)
 * [搞LEDE](lede/README.md)
   * [LEDE编译的问题与解决方案](lede/Make-problem/Problem.md)
   * [如何在路由器上跑MentoHUST](lede/Common_options/ForSchoolUseRuijie.md)

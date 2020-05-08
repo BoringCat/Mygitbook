@@ -1,9 +1,9 @@
-## 启用交换机的日记备份并用 rsyslog 接收
+# 启用交换机的日记备份并用 rsyslog 接收
 **环境：Centos 7 已关闭SELinux**  
-**\*交换机模拟环境：GNS3**
-**\*交换机实体环境：Ruijie S2628G/S2628G-E**
+**\*交换机模拟环境：GNS3**  
+**\*交换机实体环境：Ruijie S2628G/S2628G-E/S12010/N18010**
 
-### #配置rsyslog
+## #配置rsyslog
 Centos 7最小化安装自带rsyslog。若无，可执行 `yum install rsyslog` 安装  
 1. 备份默认配置文件`cp /etc/rsyslog.conf /etc/rsyslog.conf.bak`
 2. 开启UDP端口监听  
@@ -54,8 +54,8 @@ $template Remote,"/opt/switch/log/%$YEAR%-%$MONTH%/%fromhost-ip%/%$DAY%.log"
 ```
 修改完成后需重启iptables服务
 
-### #配置交换机
-#### 1. GNS3内路由器 (以Cisco3660为例)
+## #配置交换机
+## 1. GNS3内路由器 (以Cisco3660为例)
 1. 进入全局配置模式
 2. 输入命令
 ```
@@ -69,9 +69,9 @@ logging 10.0.6.254
 ```
 在日志前加入本地时间，并记录使用特权模式的用户信息  
 日志本地缓存大小为16K  
-将日志等级为 6(informational) 以下的日志以接口 f0/0 的 IP 为原 IP 发送到服务器 10.0.6.254 并在开头加上交换机的hostname  
+将日志等级为 6(informational) 以下的日志以接口 f0/0 的 IP 为源 IP 发送到服务器 10.0.6.254 并在开头加上交换机的hostname  
 
-#### 2. 锐捷交换机 (非11.X软件平台)  
+## 2. 锐捷交换机 (非11.X软件平台)  
 1. 进入全局配置模式
 2. 输入命令
 ```
@@ -85,10 +85,13 @@ logging 10.0.6.254
 ```
 在日志前加入本地时间与序号，并记录使用登录的用户信息以及全局配置模式下输入的命令  
 日志本地缓存大小为32K  
-将日志等级为 6(informational) 以下的日志以 10.0.6.10 为原 IP 发送到服务器 10.0.6.254  
-_\*锐捷交换机暂时未发现原IP的作用_
+将日志等级为 6(informational) 以下的日志以 10.0.6.10 为源 IP 发送到服务器 10.0.6.254
 
-### #验证
+源 IP 适用于需要用特定VLAN发送日志的情况，默认情况下是使用有IP地址的最小的VLAN  
+例如：VLAN10 10.1.1.0/24，VLAN 20 10.0.6.10  
+交换机会选择 VLAN 10 的IP地址作为源地址发送
+
+## #验证
 在Cisco交换机日志上会出现这样一句
 ```
 %SYS-6-LOGGINGHOST_STARTSTOP: Logging to host 10.0.6.254 port 514 started - CLI initiated
