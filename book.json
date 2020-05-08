@@ -13,6 +13,19 @@
         "theme-default",
         "anchors",
         "-anchor-navigation-ex",
-        "expandable-chapters"
-    ]
+        "expandable-chapters",
+        "git-author"
+    ],
+    "styles": {
+        "website": "./styles/website.css"
+    },
+    "pluginsConfig": {
+        "git-author": {
+            "position": "top",
+            "modifyTpl": "由 {user} 修改与 {timeStamp}",
+            "createTpl": "由 {user} 创建于 {timeStamp}",
+            "timeStampFormat": "YYYY-MM-DD HH:mm:ss"
+        }
+    }
+
 }

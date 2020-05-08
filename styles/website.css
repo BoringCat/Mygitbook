@@ -1,0 +1,9 @@
+.git-author-container {
+    text-align: right;
+    color: rgba(0,0,0,0.65);
+    position: relative;
+}
+.git-author-container .modified {
+    position: absolute;
+    top: 2rem;
+}
