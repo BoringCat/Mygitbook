@@ -25,6 +25,7 @@
 * [搞运维](linux/README.md)
   * [基于 Depian 9 调整磁盘大小及其上面的LVM](linux/Resize_disk_and_LVM.md)
   * [SSH Config 常用配置翻译](linux/SSH_Config.md)
+  * [基于Docker与Nginx的DOH服务器搭建](linux/DNS_over_HTTPS.md)
   * [SaltStack 自动化运维](linux/SaltStack/README.md)
     * [对SaltStack state.sls的理解](linux/SaltStack/state_sls_simple.md)
 * [Win出问题日常](windows/README.md)
