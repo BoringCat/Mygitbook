@@ -12,18 +12,14 @@ description: GetPackageByMonitor
 
 <details>
 <summary><strong>1. 官方文档</strong></summary>
-
-<pre><code>
-路径：实施一本通/四、功能配置/1、基础配置/7、镜像/1、多对一镜像(包含一对一镜像)
+<pre><code>路径：实施一本通/四、功能配置/1、基础配置/7、镜像/1、多对一镜像(包含一对一镜像)
 ......
 一、组网需求
 配置端口镜像，实现监控服务器能够监控g0/1及g0/2口入方向和出方向的数据流，同时监控服务器依然能够实现对外网网络的访问
 
-二、组网拓扑
-</code></pre>
-![Topology](../../.gitbook/assets/RG-Monitor-Topology.png)
-<pre><code>
-三、配置要点
+二、组网拓扑</code></pre>
+<img src="../../.gitbook/assets/RG-Monitor-Topology.png" alt="Monitor-Topology">
+<pre><code>三、配置要点
 要实现监控服务器即能对外网网络的访问，需要在配置交换机端口镜像的目的端口后面加上switch关键字
 
 四、配置步骤  
@@ -47,9 +43,7 @@ Ruijie(config)#monitor session 1 destination interface gigabitEthernet 0/24 swit
 
 Ruijie(config)#end
 Ruijie#wr
-......
-</code></pre>
-
+......</code></pre>
 </details>
 
 #### 2. 实验
@@ -73,19 +67,15 @@ Ruijie#wr
 
 <details>
 <summary><strong>1. 官方文档</strong></summary>
-
-<pre><code>
-路径：实施一本通/四、功能配置/1、基础配置/7、镜像/1、多对一镜像(包含一对一镜像)
+<pre><code>路径：实施一本通/四、功能配置/1、基础配置/7、镜像/1、多对一镜像(包含一对一镜像)
 ......
 一、组网需求
 
 g4/1及g4/2下面连接用户，g4/21及g4/22连接两台监控服务器，现在需要实现监控服务器1及监控服务器2都能监控g4/1及g4/2口的数据流
 
-二、组网拓扑
-</code></pre>
-![Monitor-Remote](../../.gitbook/assets/RG-Monitor-Remote.png)
-<pre><code>s
-三、配置要点
+二、组网拓扑</code></pre>
+<img src="../../.gitbook/assets/RG-Monitor-Remote.png" alt="Monitor-Remote">
+<pre><code>三、配置要点
 1）在核心交换机上创建Remote VLAN。
 2）指定核心交换机为RSPAN的源设备，配置直连PC1，PC2的端口g4/1及g4/2为镜像源端口；选择一个Down状态（无需手工shutdown）的端口（本例为G 4/23）为镜像输出端口，将该端口加入Remote VLAN，并配置为MAC自环。（这里的down状态的端口不是指手动将接口shutdown，而是这个接口之前没有使用，没有连线）
 3）将直连监控服务器1，监控服务器2的G4/21，G4/22端口加入Remote VLAN。
@@ -124,9 +114,7 @@ Ruijie#wr
 重点说明：
 注意：如果S86上面开启了生成树协议，同时有其他trunk口，由于RSPAN的镜像目的口有MAC- loopback功能，会导致流量在remote-vlan中打环，所以需要在所有trunk口上做vlan修剪，本例中remove vlan 100。
  
-指定自环口g4/23为镜像的目的端口配置中如果开启了switch关键字，那么需要在自环口关闭mac地址学习功能，并且清除自环口的MAC地址表项，如果没有敲switch关键字则无不需要关闭自环口的mac地址学习功能。
-</code></pre>s
-
+指定自环口g4/23为镜像的目的端口配置中如果开启了switch关键字，那么需要在自环口关闭mac地址学习功能，并且清除自环口的MAC地址表项，如果没有敲switch关键字则无不需要关闭自环口的mac地址学习功能。</code></pre>
 </details>
 
 #### 2. 实验
