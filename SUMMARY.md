@@ -32,6 +32,7 @@
   * [基于Docker与Nginx的DOH服务器搭建](linux/DNS_over_HTTPS.md)
   * [Fedora备忘录](linux/Fedora备忘录.md)
   * [在Fedora 32上跑Docker-ce，解决Cgroup2的问题](linux/Fedora32_Cgroup2_docker.md)
+  * [在Fedora32上安装Nvidia-docker](linux/InstallNvidiaDockerOnFedora32.md)
   * [SaltStack 自动化运维](linux/SaltStack/README.md)
     * [对SaltStack state.sls的理解](linux/SaltStack/state_sls_simple.md)
 * [Win出问题日常](windows/README.md)

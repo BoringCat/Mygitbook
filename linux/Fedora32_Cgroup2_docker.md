@@ -1,4 +1,4 @@
-# 在Fedora 32上跑Docker-ce
+# 在Fedora 32 上 禁用 Cgruop2
 **\* 不知道什么时候失效，当然越快越好**
 
 ## 环境
