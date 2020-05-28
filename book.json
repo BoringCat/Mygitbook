@@ -14,7 +14,9 @@
         "anchors",
         "-anchor-navigation-ex",
         "expandable-chapters",
-        "git-author"
+        "git-author",
+        "image-captions",
+        "back-to-top-button"
     ],
     "styles": {
         "website": "./styles/website.css"
@@ -25,6 +27,9 @@
             "modifyTpl": "由 {user} 修改与 {timeStamp}",
             "createTpl": "由 {user} 创建于 {timeStamp}",
             "timeStampFormat": "YYYY-MM-DD HH:mm:ss"
+        },
+        "image-captions": {
+            "caption": "Image - _CAPTION_"
         }
     }
 
