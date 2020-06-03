@@ -7,3 +7,85 @@
     position: absolute;
     top: 2rem;
 }
+
+@media(prefers-color-scheme: dark) {
+    .git-author-container, .navigation:hover {
+        color: #CCC
+    }
+    .navigation {
+        color: #111;
+    }
+    .book-summary, .book, .book .page-wrapper {
+        background: #111;
+    }
+    .book pre, .book code, .markdown-section table tr, .book-header {
+        background: #222;
+    }
+    .markdown-section table tr:nth-child(2n) {
+        background: #333;
+    }
+    .book .book-summary ul.summary li a,
+    .book .normal {
+        color: #EEE;
+    }
+    .book-summary ul.summary li.active>a {
+        color: #008cff;
+    }
+    @media (max-width: 1240px) {
+        .book-body>a {
+            background: #222;
+        }
+    }
+    .git-author-container, .navigation:hover, .book-header {
+        color: #CCC
+    }
+    .navigation {
+        color: #111;
+    }
+    .book-summary, .book, .book .page-wrapper, .navigation {
+        background: #111;
+    }
+    .book pre, .book code, .markdown-section table tr, .book-header {
+        background: #222;
+    }
+    .markdown-section table tr:nth-child(2n), .markdown-section hr {
+        background: #333;
+    }
+    .book .book-summary ul.summary li a,
+    .book .normal {
+        color: #EEE;
+    }
+    .book-summary ul.summary li.active>a {
+        color: #008cff;
+    }
+    @media (max-width: 1240px) {
+        .book-body>a {
+            background: #222;
+        }
+    }
+
+    ::-webkit-scrollbar {
+        background-color: #333;
+        height: 1rem;
+        width: 1rem;
+    }
+
+    ::-webkit-scrollbar-button {
+        background-color: #222;
+        color: #EEE
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background-color: #444;
+        border-radius: 8px;
+    }
+    
+    ::-webkit-scrollbar-thumb:hover {
+        background-color: #555;
+        border-radius: 8px;
+    }
+
+    ::-webkit-scrollbar-corner {
+        background-color: #333;
+    }
+}
