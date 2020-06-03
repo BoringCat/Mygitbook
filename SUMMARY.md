@@ -35,6 +35,7 @@
   * [在Fedora32上安装Nvidia-docker](linux/InstallNvidiaDockerOnFedora32.md)
   * [SaltStack 自动化运维](linux/SaltStack/README.md)
     * [对SaltStack state.sls的理解](linux/SaltStack/state_sls_simple.md)
-* [Win出问题日常](windows/README.md)
+* [Win日常](windows/README.md)
   * [文件历史记录备份不工作的问题](windows/FileHistory_not_work.md)
+  * [让Win7更加好看](windows/MakeWin7Beatiful.md)
   
