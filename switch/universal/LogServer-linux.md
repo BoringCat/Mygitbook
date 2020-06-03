@@ -1,7 +1,13 @@
-# 启用交换机的日记备份并用 rsyslog 接收
+# 启用交换机的日记备份并用 rsyslog 接收 <!-- omit in toc -->
 **环境：Centos 7 已关闭SELinux**  
 **\*交换机模拟环境：GNS3**  
 **\*交换机实体环境：Ruijie S2628G/S2628G-E/S12010/N18010**
+
+- [#配置rsyslog](#配置rsyslog)
+- [#配置交换机](#配置交换机)
+  - [1. GNS3内路由器 (以Cisco3660为例)](#1-gns3内路由器-以cisco3660为例)
+  - [2. 锐捷交换机 (非11.X软件平台)](#2-锐捷交换机-非11x软件平台)
+- [#验证](#验证)
 
 ## #配置rsyslog
 Centos 7最小化安装自带rsyslog。若无，可执行 `yum install rsyslog` 安装  
@@ -55,7 +61,7 @@ $template Remote,"/opt/switch/log/%$YEAR%-%$MONTH%/%fromhost-ip%/%$DAY%.log"
 修改完成后需重启iptables服务
 
 ## #配置交换机
-## 1. GNS3内路由器 (以Cisco3660为例)
+### 1. GNS3内路由器 (以Cisco3660为例)
 1. 进入全局配置模式
 2. 输入命令
 ```
@@ -71,7 +77,7 @@ logging 10.0.6.254
 日志本地缓存大小为16K  
 将日志等级为 6(informational) 以下的日志以接口 f0/0 的 IP 为源 IP 发送到服务器 10.0.6.254 并在开头加上交换机的hostname  
 
-## 2. 锐捷交换机 (非11.X软件平台)  
+### 2. 锐捷交换机 (非11.X软件平台)  
 1. 进入全局配置模式
 2. 输入命令
 ```

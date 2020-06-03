@@ -1,6 +1,11 @@
-## OpenWrt/LEDE路由器上v2ray + 透明代理
-****
+## OpenWrt/LEDE路由器上v2ray + 透明代理 <!-- omit in toc -->
+
 **以OpenWrt X86 18.06.1为例**
+
+- [安装](#安装)
+- [配置（无LUCI）](#配置无luci)
+- [透明代理](#透明代理)
+
 ### 安装
 0. [**官方安装文档**](https://www.v2ray.com/chapter_00/install.html)
 

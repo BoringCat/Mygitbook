@@ -1,16 +1,19 @@
-## LEDE编译的问题与解决方案
+## LEDE编译的问题与解决方案 <!-- omit in toc -->
 (或可用于OpenWrt)  
 
 **本文的所有问题都是在编译LEDE时遇到的**  
 
-### 标题
->+ [ArchLinux](#archlinux)
->>+ [停在 ./stage1flex -o stage1scan.c ./scan.l](#停在-stage1flex--o-stage1scanc-scanl)
->>+ [在编译 e2fsprogs/debugfs 时 create_inode.o 报错](#在编译-e2fsprogsdebugfs-时-create_inodeo-报错)
->>+ [OpenWrt 18.06.1 SDK 更新feed报错](#openwrt-18061-sdk-更新feed报错)
->>+ [OpenWrt 18.06.1 SDK 第一次Make任意包时出错](#openwrt-18061-sdk-第一次make任意包时出错)
->+ [Centos 7](#centos-7)
->>+ [在编译 gcc 时 libgcc/unwind-dw2.c 报错](#在编译-gcc-时-libgccunwind-dw2c-报错)
+### 标题 <!-- omit in toc -->
+
+- [ArchLinux](#archlinux)
+  - [**停在 ./stage1flex -o stage1scan.c ./scan.l**](#停在-stage1flex--o-stage1scanc-scanl)
+  - [**在编译 e2fsprogs/debugfs 时 create_inode.o 报错**](#在编译-e2fsprogsdebugfs-时-create_inodeo-报错)
+  - [**OpenWrt 18.06.1 SDK 更新feed报错**](#openwrt-18061-sdk-更新feed报错)
+  - [**OpenWrt 18.06.1 SDK 第一次Make任意包时出错**](#openwrt-18061-sdk-第一次make任意包时出错)
+  - [**OpenWrt 18.06.1 SDK 编译MentoHUST出错**](#openwrt-18061-sdk-编译mentohust出错)
+- [Centos 7](#centos-7)
+  - [**在编译 gcc 时 libgcc/unwind-dw2.c 报错**](#在编译-gcc-时-libgccunwind-dw2c-报错)
+
 ---
 
 ## ArchLinux

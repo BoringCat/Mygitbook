@@ -2,7 +2,11 @@
 description: Web_Managed
 ---
 
-# 希力可WEB网管交换机VLAN配置
+# 希力可WEB网管交换机VLAN配置 <!-- omit in toc -->
+
+- [VLAN设置](#vlan设置)
+- [VLAN 端口设置](#vlan-端口设置)
+- [综合配置](#综合配置)
 
 **实验设备：希力SR-SG2005简单网管交换机**
 
@@ -86,7 +90,7 @@ description: Web_Managed
 (config-if)# switchport mode trunk
 ```
 
-#### 综合配置
+### 综合配置
 
 **目的：**
 

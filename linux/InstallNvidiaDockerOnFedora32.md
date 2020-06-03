@@ -1,4 +1,15 @@
-# 在Fedora32上安装Nvidia-docker
+# 在Fedora32上安装Nvidia-docker <!-- omit in toc -->
+
+- [系统环境](#系统环境)
+- [配置](#配置)
+  - [1. 查看支持系统](#1-查看支持系统)
+  - [2. 使用 Centos7 的 repo 进行安装](#2-使用-centos7-的-repo-进行安装)
+  - [3. 安装 nvidia-docker2](#3-安装-nvidia-docker2)
+  - [4. Reload docker](#4-reload-docker)
+  - [5. 验证](#5-验证)
+- [Docker-Compose注意事项](#docker-compose注意事项)
+- [用途？](#用途)
+
 ## 系统环境
 - 系统: Fedora 32 (Thirty Two)
 - 内核: 5.6.13-300.fc32.x86_64

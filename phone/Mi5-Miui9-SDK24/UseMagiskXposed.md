@@ -1,4 +1,11 @@
-## 在MIUI9上面安装Magisk和使用systemless-Xposed
+## 在MIUI9上面安装Magisk和使用systemless-Xposed <!-- omit in toc -->
+
+- [前提条件](#前提条件)
+- [1、下载Magisk](#1下载magisk)
+- [2、刷入Magisk](#2刷入magisk)
+- [3、安装Xposed Framework](#3安装xposed-framework)
+- [4、验证](#4验证)
+- [额外内容](#额外内容)
 
 ### 前提条件
 **1. 未更改过系统的Boot分区，如SuperSU等Systemless应用**  

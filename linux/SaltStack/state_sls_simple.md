@@ -1,4 +1,10 @@
-# 对SaltStack state.sls的理解
+# 对SaltStack state.sls的理解 <!-- omit in toc -->
+
+- [1. 简单环境](#1-简单环境)
+  - [1. 初始化](#1-初始化)
+    - [/etc/salt/master](#etcsaltmaster)
+    - [/srv/salt/top.sls](#srvsalttopsls)
+
 ## 1. 简单环境
 ### 1. 初始化
 #### /etc/salt/master

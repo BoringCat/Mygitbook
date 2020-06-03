@@ -1,5 +1,11 @@
-## 在路由器上跑MentoHUST
+## 在路由器上跑MentoHUST <!-- omit in toc -->
 **备忘录**  
+
+- [编译与安装](#编译与安装)
+- [配置（无LUCI）](#配置无luci)
+- [配置（LUCI）](#配置luci)
+- [进阶（无LUCI）](#进阶无luci)
+
 #### 编译与安装
 1. 在Git上拉[MentoHUST-OpenWrt-ipk](https://github.com/BoringCat/MentoHUST-OpenWrt-ipk)代码
 ```

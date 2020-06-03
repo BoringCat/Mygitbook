@@ -1,5 +1,6 @@
-## 如何更改小米路由器R2D的VLAN配置
+## 如何更改小米路由器R2D的VLAN配置 <!-- omit in toc -->
 **本文所有终端文本编辑器均为vim，若不熟悉vim可用nano代替**
+
 1. **基础配置**  
 >**vim /etc/config/network**  
 &nbsp;&nbsp;&nbsp;&nbsp;1、从switch_vlan 'eth0_1'中去除你想用的端口并记住端口号 (具体端口号文末给出)  

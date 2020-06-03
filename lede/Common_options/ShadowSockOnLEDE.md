@@ -1,5 +1,10 @@
-## LEDE路由器上SS + 透明代理
+## LEDE路由器上SS + 透明代理 <!-- omit in toc -->
 **备忘录**  
+
+- [编译与安装](#编译与安装)
+- [配置](#配置)
+- [进阶](#进阶)
+
 #### 编译与安装  
 1. 在Git上拉取编译SS所需的代码和依赖  
 [shadowsocks/openwrt-feeds](https://github.com/shadowsocks/openwrt-feeds)  

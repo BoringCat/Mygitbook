@@ -1,4 +1,12 @@
-# 基于OpenWrt/LEDE的PXE网络启动
+# 基于OpenWrt/LEDE的PXE网络启动 <!-- omit in toc -->
+
+- [前言](#前言)
+- [如何配置](#如何配置)
+  - [准备工作](#准备工作)
+  - [传统BIOS引导](#传统bios引导)
+  - [UEFI引导](#uefi引导)
+  - [优化](#优化)
+
 ## 前言  
 本文以bios下启动syslinux引导WinPE的ISO文件以及UEFI下引导WinPE的WIM文件为例  
 关于如何引导liveCD，OpenWrt的Wiki上有详细的资料[PXE-Boot from OpenWRT [OpenWrt Project]](https://openwrt.org/doc/howto/tftp.pxe-server)
