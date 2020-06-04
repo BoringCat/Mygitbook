@@ -31,6 +31,7 @@
   * [SSH Config 常用配置翻译](linux/SSH_Config.md)
   * [基于Docker与Nginx的DOH服务器搭建](linux/DNS_over_HTTPS.md)
   * [Fedora备忘录](linux/Fedora备忘录.md)
+  * [Centos备忘录](linux/Centos备忘录.md)
   * [在Fedora 32上跑Docker-ce，解决Cgroup2的问题](linux/Fedora32_Cgroup2_docker.md)
   * [在Fedora32上安装Nvidia-docker](linux/InstallNvidiaDockerOnFedora32.md)
   * [SaltStack 自动化运维](linux/SaltStack/README.md)
