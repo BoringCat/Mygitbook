@@ -3,6 +3,7 @@
 - [批量改源 (7)](#批量改源-7)
 - [epel](#epel)
 - [zabbix改源](#zabbix改源)
+- [Tomcat](#tomcat)
 - [终端自动登录](#终端自动登录)
 
 ## 批量改源 (7)
@@ -33,6 +34,13 @@ sed -e 's!//repo\.zabbix\.com!//mirrors.tuna.tsinghua.edu.cn/zabbix!g' \
     -e 's!https://mirrors\.tuna!https://mirrors.tuna!g' \
     -i /etc/yum.repos.d/zabbix.repo
 ```
+
+## Tomcat
+在bin中添加文件setenv.sh
+``` sh
+JAVA_HOME="/path/to/java"
+```
+即可完成JAVA配置
 
 ## 终端自动登录
 ```sh

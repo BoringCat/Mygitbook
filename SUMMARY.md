@@ -11,11 +11,12 @@
   * [电信天翼宽带家庭网关破解](HomeNetwork/Telecom/Hack_To_Telecom_device.md)
 * 搞LEDE
   * [LEDE编译的问题与解决方案](lede/Make-problem/Problem.md)
-  * [如何在路由器上跑MentoHUST](lede/Common_options/ForSchoolUseRuijie.md)
-  * [如何在路由器上跑MiniEAP](lede/Common_options/ForSchoolUseRuijie2.md)
-  * [LEDE路由器上SS + 透明代理](lede/Common_options/ShadowSockOnLEDE.md)
+  * 适用于学校
+    * [如何在路由器上跑MentoHUST](lede/Common_options/ForSchoolUseRuijie.md)
+    * [如何在路由器上跑MiniEAP](lede/Common_options/ForSchoolUseRuijie2.md)
   * [基于OpenWrt/LEDE的PXE网络启动](lede/Common_options/PXEBoot.md)
   * [在OpenWrt/LEDE设置静态物网络地址转换](lede/Common_options/StaticNat.md)
+  * [LEDE路由器上SS + 透明代理](lede/Common_options/ShadowSockOnLEDE.md)
   * [OpenWrt/LEDE路由器上v2ray + 透明代理](lede/Common_options/v2rayOnOpenwrt.md)
 * 搞交换机
   * [希力可WEB网管交换机VLAN配置](switch/siri-switch/web_managed.md)
@@ -34,6 +35,7 @@
   * 备忘录
     * [Fedora备忘录](linux/Fedora备忘录.md)
     * [Centos备忘录](linux/Centos备忘录.md)
+    * [安装Mysql5.7](linux/mysql/Mysql57Install.md)
   * SaltStack 自动化运维
     * [对SaltStack state.sls的理解](linux/SaltStack/state_sls_simple.md)
 * Win日常
