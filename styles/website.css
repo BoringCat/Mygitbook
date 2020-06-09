@@ -42,7 +42,7 @@
     .navigation {
         color: #111;
     }
-    .book-summary, .book, .book .page-wrapper, .navigation {
+    .book-summary, .book, .book .page-wrapper, .navigation, .book-body {
         background: #111;
     }
     .book pre, .book code, .markdown-section table tr, .book-header {
@@ -51,12 +51,18 @@
     .markdown-section table tr:nth-child(2n), .markdown-section hr {
         background: #333;
     }
-    .book .book-summary ul.summary li a,
     .book .normal {
         color: #EEE;
     }
+    .book .book-summary ul.summary li a,
+    .book .book-summary ul.summary li span {
+        color: #DDD;
+    }
     .book-summary ul.summary li.active>a {
         color: #008cff;
+    }
+    .book-summary ul.summary {
+        background: #171717;
     }
     @media (max-width: 1240px) {
         .book-body>a {

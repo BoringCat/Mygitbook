@@ -1,6 +1,6 @@
 # Table of contents
 
-* MyLog - 我的经验与记录
+* [MyLog - 我的经验与记录](README.md)
 * 折腾小米路由器
   * [小米路由器2 VLAN的配置](HomeNetwork/mirother/MiRother2_Vlan_wiki.md)
   * [折腾小米路由器2 VLAN的记录](HomeNetwork/mirother/MiRother2_Vlan_Story.md)
