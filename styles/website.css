@@ -61,7 +61,7 @@
     .book-summary ul.summary li.active>a {
         color: #008cff;
     }
-    .book-summary ul.summary {
+    .book-summary ul.summary, .book-summary {
         background: #171717;
     }
     @media (max-width: 1240px) {
