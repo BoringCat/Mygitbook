@@ -3,6 +3,7 @@
 - [批量改源 (7)](#批量改源-7)
 - [epel](#epel)
 - [zabbix改源](#zabbix改源)
+- [docker-ce](#docker-ce)
 - [Tomcat](#tomcat)
 - [终端自动登录](#终端自动登录)
 
@@ -33,6 +34,16 @@ cp /etc/yum.repos.d/zabbix.repo /etc/yum.repos.d/zabbix.repo.bak && \
 sed -e 's!//repo\.zabbix\.com!//mirrors.tuna.tsinghua.edu.cn/zabbix!g' \
     -e 's!https://mirrors\.tuna!https://mirrors.tuna!g' \
     -i /etc/yum.repos.d/zabbix.repo
+```
+
+## docker-ce
+``` sh
+yum remove docker docker-common docker-selinux docker-engine && \
+yum install yum-utils device-mapper-persistent-data lvm2 wget && \
+wget -O /etc/yum.repos.d/docker-ce.repo.bak https://download.docker.com/linux/centos/docker-ce.repo && \
+sed 's+download.docker.com+mirrors.tuna.tsinghua.edu.cn/docker-ce+' /etc/yum.repos.d/docker-ce.repo.bak > /etc/yum.repos.d/docker-ce.repo && \
+yum makecache fast && \
+yum install docker-ce
 ```
 
 ## Tomcat

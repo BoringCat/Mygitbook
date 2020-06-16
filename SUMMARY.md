@@ -32,13 +32,17 @@
   * [基于Docker与Nginx的DOH服务器搭建](linux/DNS_over_HTTPS.md)
   * [在Fedora 32上跑Docker-ce，解决Cgroup2的问题](linux/Fedora32_Cgroup2_docker.md)
   * [在Fedora32上安装Nvidia-docker](linux/InstallNvidiaDockerOnFedora32.md)
-  * 备忘录
-    * [Fedora备忘录](linux/Fedora备忘录.md)
-    * [Centos备忘录](linux/Centos备忘录.md)
-    * [安装Mysql5.7](linux/mysql/Mysql57Install.md)
   * SaltStack 自动化运维
     * [对SaltStack state.sls的理解](linux/SaltStack/state_sls_simple.md)
 * Win日常
   * [文件历史记录备份不工作的问题](windows/FileHistory_not_work.md)
   * [让Win7更加好看](windows/MakeWin7Beatiful.md)
-  
+* 备忘录
+  * [Fedora备忘录](linux/Fedora备忘录.md)
+  * [Centos备忘录](linux/Centos备忘录.md)
+  * [Docker备忘录](linux/Docker备忘录.md)
+  * [Python备忘录](software/Python备忘录.md)
+  * [NodeJs备忘录](software/nodejs备忘录.md)
+  * [各类脚本](linux/各类脚本.md)
+  * [zshrc备忘录](linux/zshrc.md)
+  * [安装Mysql5.7](linux/mysql/Mysql57Install.md)
