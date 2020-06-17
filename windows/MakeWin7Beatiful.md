@@ -5,6 +5,8 @@
 - [1. 背景优化](#1-背景优化)
 - [2. 终端优化](#2-终端优化)
 - [3. 截屏](#3-截屏)
+- [4. 虚拟桌面](#4-虚拟桌面)
+- [5. 剪粘版](#5-剪粘版)
 
 ## 1. 背景优化
 - 用你喜欢的背景换
@@ -57,8 +59,37 @@
 
 ## 3. 截屏
 - 微信，QQ，企业微信截屏
-- 
+- [picpick][5]
+
+
+## 4. 虚拟桌面
+- (推荐) [dexpot][4]
+  1.6版本对个人免费  
+  支持设置快捷键  
+  支持wallpaper engine（思维混乱）  
+  - 推荐配置:
+  - 常规:
+    - 开机自动运行
+    - 隐藏启动屏幕
+  - 控制
+    - 热键
+      - 切换桌面
+        - 上一个桌面: Ctrl+Win+Left
+        - 下一个桌面: Ctrl+Win+Right
+  - 插件和附加
+    - Dexcube
+      - 效果: 墙/幻灯片
+      - 缩放: 最大的
+      - 动画速度: 218
+
+## 5. 剪粘版
+- 1clipboard  
+  FREE  
+  无需配置
+  谷歌同步
 
 [1]: https://cmder.net/
 [2]: https://www.thisfaner.com/p/custom-cmder/#配置-cmd
 [3]: https://github.com/AmrEldib/cmder-powerline-prompt
+[4]: https://www.dexpot.de/index.php
+[5]: https://picpick.app/

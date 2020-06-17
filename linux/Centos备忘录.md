@@ -2,6 +2,7 @@
 
 - [批量改源 (7)](#批量改源-7)
 - [epel](#epel)
+- [SCLo](#sclo)
 - [zabbix改源](#zabbix改源)
 - [docker-ce](#docker-ce)
 - [Tomcat](#tomcat)
@@ -26,6 +27,19 @@ sed -e 's!^metalink=!#metalink=!g' \
     -e 's!//download\.fedoraproject\.org/pub!//mirrors.sjtug.sjtu.edu.cn/fedora!g' \
     -e 's!http://mirrors\.sjtug!https://mirrors.sjtug!g' \
     -i /etc/yum.repos.d/epel.repo
+```
+
+## SCLo
+```sh
+yum install centos-release-scl && \
+cp /etc/yum.repos.d/CentOS-SCLo-scl.repo /etc/yum.repos.d/CentOS-SCLo-scl.repo.bak && \
+cp /etc/yum.repos.d/CentOS-SCLo-scl-rh.repo /etc/yum.repos.d/CentOS-SCLo-scl-rh.repo.bak && \
+sed -e 's!^mirrorlist=!#mirrorlist=!g' \
+    -e 's!^#[ ]*baseurl=!baseurl=!g' \
+    -e 's!//mirror\.centos\.org!//mirrors.sjtug.sjtu.edu.cn!g' \
+    -e 's!http://mirrors\.sjtug!https://mirrors.sjtug!g' \
+    -i /etc/yum.repos.d/CentOS-SCLo-scl.repo \
+    /etc/yum.repos.d/CentOS-SCLo-scl-rh.repo
 ```
 
 ## zabbix改源
