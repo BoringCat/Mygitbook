@@ -3,7 +3,7 @@
 _FIND_=$(command -v find)
 
 find_powerline_config() {
-    which powerline-config 2>/dev/null
+    command -v powerline-config 2>/dev/null
     [ $? -ne 0 ] && \
     echo "powerline-config not found, Please use: '`basename $0` /path/to/powerline-config' to create ~/.zshrc" >&2 && \
     exit 1
@@ -34,7 +34,7 @@ if_config_in_home() {
 get_aliases() {
     local systemtype=$1
     case "${systemtype}" in
-        archlinux)
+        arch)
         echo "alias pacuda='pacman -Syu'
               alias pacget='pacman -S'
               alias pacsea='pacman -Ss'
@@ -79,7 +79,7 @@ config_zshrc() {
           alias cls='clear'
           alias docker-runrm='docker run --rm -it'" | sed 's/^[ ]*//g' >> $HOME/.zshrc
     echo >> $HOME/.zshrc
-    get_aliases centos >> $HOME/.zshrc
+    get_aliases `grep -E '^ID' /etc/os-release | cut -d= -f2` >> $HOME/.zshrc
 }
 custom_path=1
 if [ -z "$1" ]; then

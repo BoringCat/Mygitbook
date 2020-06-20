@@ -16,7 +16,8 @@
         "expandable-chapters",
         "git-author",
         "image-captions",
-        "back-to-top-button"
+        "back-to-top-button",
+        "code"
     ],
     "styles": {
         "website": "./styles/website.css"

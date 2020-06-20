@@ -20,7 +20,7 @@ pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
 - powerline-status (Oh-my-zsh)
 - pylint (VsCode)
 - virtualenv
-- 
+
 ## venv 项目配置
 ### setupenv.sh
 ```sh
