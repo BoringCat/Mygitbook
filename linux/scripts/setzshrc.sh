@@ -33,25 +33,32 @@ if_config_in_home() {
 
 get_aliases() {
     local systemtype=$1
+    local useridroot=0
+    local alias_addon=''
+    for ugid in `id -G`
+    do
+        [ "$ugid" -eq "0" ] && useridroot=1
+    done
+    [ "$useridroot" -eq "0" ] && alias_addon='sudo '
     case "${systemtype}" in
         arch)
-        echo "alias pacuda='pacman -Syu'
-              alias pacget='pacman -S'
-              alias pacsea='pacman -Ss'
-              alias pacrm='pacman -Rns'
-              alias pacjrm='pacman -R'" | \
+        echo "alias pacuda='${alias_addon}pacman -Syu'
+              alias pacget='${alias_addon}pacman -S'
+              alias pacsea='${alias_addon}pacman -Ss'
+              alias pacrm='${alias_addon}pacman -Rns'
+              alias pacjrm='${alias_addon}pacman -R'" | \
         sed 's/^[ ]*//g'
         ;;
         fedora)
-        echo "alias dnfuda='dnf update'
-              alias dnfget='dnf install'
-              alias dnfrm='dnf remove'" | \
+        echo "alias dnfuda='${alias_addon}dnf update'
+              alias dnfget='${alias_addon}dnf install'
+              alias dnfrm='${alias_addon}dnf remove'" | \
         sed 's/^[ ]*//g'
         ;;
         centos)
-        echo "alias yumuda='yum update'
-              alias yumget='yum install'
-              alias yumrm='yum remove'" | \
+        echo "alias yumuda='${alias_addon}yum update'
+              alias yumget='${alias_addon}yum install'
+              alias yumrm='${alias_addon}yum remove'" | \
         sed 's/^[ ]*//g'
         ;;
     esac
@@ -79,7 +86,8 @@ config_zshrc() {
           alias cls='clear'
           alias docker-runrm='docker run --rm -it'" | sed 's/^[ ]*//g' >> $HOME/.zshrc
     echo >> $HOME/.zshrc
-    get_aliases `grep -E '^ID' /etc/os-release | cut -d= -f2` >> $HOME/.zshrc
+    local systemID=`grep -E '^ID=' /etc/os-release | cut -d= -f2`
+    get_aliases ${systemID//\"/} >> $HOME/.zshrc
 }
 custom_path=1
 if [ -z "$1" ]; then

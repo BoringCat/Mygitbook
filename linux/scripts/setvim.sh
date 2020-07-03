@@ -2,8 +2,6 @@
 
 _FIND_=$(command -v find)
 
-[ ! -f "$HOME/.zshrc" ] && echo "~/.zshrc not found" && exit 1
-
 find_powerline_config() {
     local configname=$1
     local configfile=$2
