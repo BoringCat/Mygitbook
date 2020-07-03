@@ -44,6 +44,6 @@ else
     custom_path=1
 fi
 [ -z "${powerline_path}" ] && exit 1
-powerline_path=`dirname ${powerline_path}`
+powerline_path=$(realpath `dirname ${powerline_path}`)
 
 set_tmux $(if_config_in_home $(find_configs ${powerline_path} tmux powerline.conf))

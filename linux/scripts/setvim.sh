@@ -7,7 +7,7 @@ find_powerline_config() {
     local configfile=$2
     local dir
     local file
-    dir=$($_FIND_ $(dirname `dirname $(command -v powerline-config)`)/lib* -type d -name "${configname}" -print0 | grep -FzZ "powerline/bindings/${configname}")
+    dir=$($_FIND_ $(dirname $(realpath `dirname $(command -v powerline-config)`))/lib* -type d -name "${configname}" -print0 | grep -FzZ "powerline/bindings/${configname}")
     [ ! -z "${configfile}" ] && \
         file=$($_FIND_ $dir -type f -name "${configfile}")
     [ -z "${file}" ] && echo ${dir} || echo ${file}

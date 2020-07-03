@@ -98,7 +98,7 @@ else
     custom_path=1
 fi
 [ -z "${powerline_path}" ] && exit 1
-powerline_path=`dirname ${powerline_path}`
+powerline_path=$(realpath `dirname ${powerline_path}`)
 
 cd $HOME
 ZSH="$HOME/.oh-my-zsh"
