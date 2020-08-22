@@ -70,6 +70,7 @@ if __name__ == "__main__":
     port = 8080
     if lenarg == 1:
         print('使用方法： %s <光猫IP> [<光猫管理端口>]' % sys.argv[0])
+        exit(1)
     elif lenarg == 2:
         host = sys.argv[1]
     elif lenarg == 3:
