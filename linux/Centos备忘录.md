@@ -7,8 +7,6 @@
 - [docker-ce](#docker-ce)
 - [Tomcat](#tomcat)
 - [终端自动登录](#终端自动登录)
-- [LVM](#lvm)
-  - [root缓存](#root缓存)
 - [加快内核压缩](#加快内核压缩)
 
 ## 批量改源 (7)
@@ -76,14 +74,6 @@ JAVA_HOME="/path/to/java"
 [Service]
 ExecStart=
 ExecStart=-/sbin/agetty --autologin root --noclear %I $TERM
-```
-
-## LVM
-### root缓存
-/etc/dracut.conf.d/idmcache.conf
-```conf
-add_dracutmodules+=" lvm "
-add_drivers+=" dm_cache "
 ```
 
 ## 加快内核压缩
