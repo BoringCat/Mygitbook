@@ -32,6 +32,7 @@
   * [基于Docker与Nginx的DOH服务器搭建](linux/DNS_over_HTTPS.md)
   * [在Fedora 32上跑Docker-ce，解决Cgroup2的问题](linux/Fedora32_Cgroup2_docker.md)
   * [在Fedora32上安装Nvidia-docker](linux/InstallNvidiaDockerOnFedora32.md)
+  * [为Centos7编译兼容IPv6 TOA的内核](linux/LinuxKernelWithTOA.md)
   * SaltStack 自动化运维
     * [对SaltStack state.sls的理解](linux/SaltStack/state_sls_simple.md)
 * Win日常
