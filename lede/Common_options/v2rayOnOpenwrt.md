@@ -17,9 +17,9 @@
 | :---------: | :--------------------: | :------------: |
 |    v2ray    |     /usr/bin/v2ray     | 添加可执行权限 |
 |    v2ctl    |     /usr/bin/v2ctl     | 添加可执行权限 |
-|  geoip.dat  |  /etc/v2ray/geoip.dat  |
-| geosite.dat | /etc/v2ray/geosite.dat |
-|   *.json    |      /etc/v2ray/       |
+|  geoip.dat  |  /etc/v2ray/geoip.dat  | - |
+| geosite.dat | /etc/v2ray/geosite.dat | - |
+|   *.json    |      /etc/v2ray/       | - |
 
    并且链接以下文件
 
@@ -80,6 +80,7 @@
        }
    }
    ```
+
 |配置项|备注|
 |:-:|:-:|
 |port|透明代理的端口，可以选个你喜欢的，只要路由器内部不冲突|

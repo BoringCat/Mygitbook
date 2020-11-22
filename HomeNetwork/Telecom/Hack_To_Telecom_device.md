@@ -12,7 +12,7 @@
 
 ## 手动破解
 1. 打开光猫管理页，确认设备型号、系统版本
-2. 打开 `http://<光猫管理地址>:8080` 确认有web页面返回
+2. 打开 `http://<光猫管理地址>:8080` 确认有web页面返回  
    ![光猫管理页](../../.gitbook/assets/telecom-8080page.png)  
    或（如果你在安徽？）  
    ![光猫管理页-Anhui](../../.gitbook/assets/telecom-8080page-AnHui.png)  

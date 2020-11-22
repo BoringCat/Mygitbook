@@ -19,25 +19,25 @@ rpm -Uvh https://repo.mysql.com/yum/mysql-5.7-community/el/7/x86_64/mysql57-comm
 ```
 
 ## 安装
-''' sh
+``` sh
 yum install mysql-community-server
-'''
+```
 
 ## 启动前配置
 ### 加载 my.cnf.d 的配置
-/etc/my.cnf
+`/etc/my.cnf`
 ```conf
 ...
 !includedir /etc/my.cnf.d
 ```
 ### 默认 UTF8
-/etc/my.cnf.d/default_utf8.cnf
+`/etc/my.cnf.d/default_utf8.cnf`
 ```conf
 [mysqld]
 character-set-server = utf8
 ```
 ### 禁用密码安全检查（可选）
-/etc/my.cnf.d/simplepwd.cnf
+`/etc/my.cnf.d/simplepwd.cnf`
 ```conf
 [mysqld]
 validate_password=off

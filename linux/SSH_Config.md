@@ -12,16 +12,16 @@
 ### 配置项
 |                    名称 |     中文解释     |                                     |
 | ----------------------: | :--------------: | :---------------------------------- |
-|              `HostName` |    主机名/IP     |                                     |
+|              `HostName` |    主机名/IP     | - |
 |                  `Port` |     主机端口     | 1-65535                             |
-|                  `User` |  登录用的用户名  |                                     |
-|          `IdentityFile` | 登录用的私钥文件 |                                     |
+|                  `User` |  登录用的用户名  | - |
+|          `IdentityFile` | 登录用的私钥文件 | - |
 |          `ProxyCommand` |     代理命令     | Socks: `nc -x 127.0.0.1:1080 %h %p` |
-|    `UserKnownHostsFile` | 认证主机缓存文件 |                                     |
-| `StrictHostKeyChecking` | 是否确认主机密钥 |                                     |
+|    `UserKnownHostsFile` | 认证主机缓存文件 | - |
+| `StrictHostKeyChecking` | 是否确认主机密钥 | - |
 |          `LocalForward` | 远程端口转发到本地 | `本地主机的端口 远程主机的地址/IP:远程主机的端口` |
 |         `RemoteForward` | 本地端口转发到远程 | `远程主机的端口 目的主机的地址/IP:目的主机的端口` |
-|              `LogLevel` |     日志等级     |                                     |
+|              `LogLevel` |     日志等级     | - |
 
 ## 特殊解释
 ### LocalForward
