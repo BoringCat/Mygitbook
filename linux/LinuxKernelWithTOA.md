@@ -182,7 +182,7 @@ def listen():
     s.bind(('0.0.0.0', sport))
     s.listen(10)
     while True:
-        client, address = connection.accept()
+        client, address = s.accept()
         print(address)
         client.close()
 
@@ -203,7 +203,7 @@ def listen():
     s.bind(('::', sport))
     s.listen(10)
     while True:
-        client, address = connection.accept()
+        client, address = s.accept()
         print(address)
         client.close()
 
