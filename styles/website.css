@@ -8,36 +8,26 @@
     top: 2rem;
 }
 
+.page-inner {
+    max-width: calc(100% - 200px);
+}
+
+@font-face {
+    font-family: 'DroidSansMono';
+    src: url("/styles/DroidSansMono.ttf");
+} 
+
+pre * {
+    font-family: 'DroidSansMono' !important;
+}
+
 @media(prefers-color-scheme: dark) {
     .git-author-container, .navigation:hover {
-        color: #CCC
+        color: #CCC;
+        background-color: #222;
     }
-    .navigation {
-        color: #111;
-    }
-    .book-summary, .book, .book .page-wrapper {
-        background: #111;
-    }
-    .book pre, .book code, .markdown-section table tr, .book-header {
-        background: #222;
-    }
-    .markdown-section table tr:nth-child(2n) {
-        background: #333;
-    }
-    .book .book-summary ul.summary li a,
-    .book .normal {
-        color: #EEE;
-    }
-    .book-summary ul.summary li.active>a {
-        color: #008cff;
-    }
-    @media (max-width: 1240px) {
-        .book-body>a {
-            background: #222;
-        }
-    }
-    .git-author-container, .navigation:hover, .book-header {
-        color: #CCC
+    blockquote *:not(a) {
+        color: #AAA;
     }
     .navigation {
         color: #111;
@@ -51,9 +41,7 @@
     .markdown-section table tr:nth-child(2n), .markdown-section hr {
         background: #333;
     }
-    .book .normal {
-        color: #EEE;
-    }
+    .book .normal, 
     .book .book-summary ul.summary li a,
     .book .book-summary ul.summary li span {
         color: #DDD;
@@ -68,6 +56,15 @@
         .book-body>a {
             background: #222;
         }
+        .page-inner {
+            max-width: calc(100% - 20px);
+        }
+    }
+    .page-inner a:not(.plugin-anchor) {
+        color: #489aeb !important;
+    }
+    .page-inner *:not(pre) > code {
+        color: coral;
     }
 
     ::-webkit-scrollbar {
