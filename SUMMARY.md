@@ -23,6 +23,7 @@
   * [通过交换机的镜像功能抓包](switch/universal/GetPackageByMonitor.md)
   * [启用交换机的日记备份并用 rsyslog 接收](switch/universal/LogServer-linux.md)
   * [在锐捷三层交换机上部署DHCPv6-PD](switch/universal/DHCPv6-PDOnRuijieSwitch.md)
+  * [思科SLA链路状态检测实验](linux/Cisco_SLA_Switch_Route.md)
 * 搞手机
   * [取消Miui9的 /data 分区加密](phone/Mi5-Miui9-SDK24/DisableEncryption.md)
   * [在MIUI9上面安装Magisk和使用systemless-Xposed](phone/Mi5-Miui9-SDK24/UseMagiskXposed.md)
