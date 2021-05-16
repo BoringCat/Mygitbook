@@ -34,6 +34,7 @@
   * [在Fedora 32上跑Docker-ce，解决Cgroup2的问题](linux/Fedora32_Cgroup2_docker.md)
   * [在Fedora32上安装Nvidia-docker](linux/InstallNvidiaDockerOnFedora32.md)
   * [为Centos7编译兼容IPv6 TOA的内核](linux/LinuxKernelWithTOA.md)
+  * [Zabbix + ElasticSearch + ilm 解决方案](linux/zabbix/zabbix_elastic_ilm.md)
   * SaltStack 自动化运维
     * [对SaltStack state.sls的理解](linux/SaltStack/state_sls_simple.md)
 * Win日常
