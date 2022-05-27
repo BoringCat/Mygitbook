@@ -37,6 +37,8 @@
   * [Zabbix + ElasticSearch + ilm 解决方案](linux/zabbix/zabbix_elastic_ilm.md)
   * SaltStack 自动化运维
     * [对SaltStack state.sls的理解](linux/SaltStack/state_sls_simple.md)
+  * ProxmoxVE集群
+    * [玩 ProxmoxVE 遇到的坑](linux/ProxmoxVE/坑.md)
 * Win日常
   * [文件历史记录备份不工作的问题](windows/FileHistory_not_work.md)
   * [让Win7更加好看](windows/MakeWin7Beatiful.md)
