@@ -48,6 +48,7 @@
   * [Docker备忘录](linux/Docker备忘录.md)
   * [Python备忘录](software/Python备忘录.md)
   * [NodeJs备忘录](software/nodejs备忘录.md)
+  * [K3s备忘录](software/K3s备忘录.md)
   * [各类脚本](linux/各类脚本.md)
   * [zshrc备忘录](linux/zshrc.md)
   * [安装Mysql5.7](linux/mysql/Mysql57Install.md)
