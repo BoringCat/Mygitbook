@@ -43,6 +43,8 @@
   * [文件历史记录备份不工作的问题](windows/FileHistory_not_work.md)
   * [让Win7更加好看](windows/MakeWin7Beatiful.md)
 * 备忘录
+  * [安装Mysql5.7](linux/mysql/Mysql57Install.md)
+  * [使用xDroid作为抓包测试环境](linux/Android/使用xDroid作为抓包测试环境.md)
   * [Fedora备忘录](linux/Fedora备忘录.md)
   * [Centos备忘录](linux/Centos备忘录.md)
   * [Docker备忘录](linux/Docker备忘录.md)
@@ -51,4 +53,3 @@
   * [K3s备忘录](software/K3s备忘录.md)
   * [各类脚本](linux/各类脚本.md)
   * [zshrc备忘录](linux/zshrc.md)
-  * [安装Mysql5.7](linux/mysql/Mysql57Install.md)
