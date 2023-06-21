@@ -39,6 +39,9 @@
     * [对SaltStack state.sls的理解](linux/SaltStack/state_sls_simple.md)
   * ProxmoxVE集群
     * [玩 ProxmoxVE 遇到的坑](linux/ProxmoxVE/坑.md)
+  * 监控系统
+    * [Prometheus备忘录](linux/Prometheus备忘录.md)
+    * [Mimir备忘录](linux/Mimir备忘录.md)
 * Win日常
   * [文件历史记录备份不工作的问题](windows/FileHistory_not_work.md)
   * [让Win7更加好看](windows/MakeWin7Beatiful.md)
