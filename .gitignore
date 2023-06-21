@@ -1,5 +1,6 @@
 _book
 .vscode
+.devcontainer
 node_modules
 *.local.*
 *.local
