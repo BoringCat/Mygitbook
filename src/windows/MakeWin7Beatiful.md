@@ -1,6 +1,6 @@
 # 让Win7更加好看  <!-- omit in toc -->
 ## 为什么是Win7？ 这就是社会的毒打  <!-- omit in toc -->
-![我草啊垃圾win7](../.gitbook/assets/Windows_GodDamnIt.jpg)
+![我草啊垃圾win7](../assets/Windows_GodDamnIt.jpg)
 
 - [1. 背景优化](#1-背景优化)
 - [2. 终端优化](#2-终端优化)

@@ -1,3 +1,15 @@
 .rust, .coal, .navy, .ayu {
     --sidebar-fg: #ddd;
 }
+h2, h3 {
+    margin-block-start: 3rem;
+}
+.table-wrapper {
+  display: inline-block;
+}
+@media (min-width: 900px){
+  :root {
+    --content-max-width: 80%;
+    font-size: 72.5%;
+  }
+}

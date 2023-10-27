@@ -85,10 +85,10 @@ GET /_nodes?filter_path=nodes.*.settings.path.repo
 }
 ```
 #### 存储库
-![存储库配置](../../.gitbook/assets/ZBX_ES_snapshot_restore-edit_repository.png)
+![存储库配置](../../assets/linux/zabbix/ZBX_ES_snapshot_restore-edit_repository.png)
 #### 策略
 **注：按实际情况配置**  
-![存储库配置](../../.gitbook/assets/ZBX_ES_snapshot_restore-policies.png)
+![存储库配置](../../assets/linux/zabbix/ZBX_ES_snapshot_restore-policies.png)
 ### 索引生命周期 index lifecycle management (ilm)
 描述：主分片数据量达到 50G，或者存在时间超过 31天 后，滚动到下一个索引写入。滚动完成后，索引保留 1年 后删除  
 这里命名为 zabbix-roll

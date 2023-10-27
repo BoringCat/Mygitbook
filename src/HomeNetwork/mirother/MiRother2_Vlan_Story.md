@@ -147,4 +147,4 @@ nvram set vlan3ports='3 5'
 用网线把小米路由器与Tplink连起来后，看到小米路由器上eth0.3获取到IP，在Tplink上绑定MAC-IP-ARP后添加到192.168.31.0/24的路由。  
 连接在Tplink下的设备可以正常ssh小米路由器，甚至可以通过修改默认路由的方法通过小米路由器上网  
 最终实现的拓扑如下~~(及其简单)~~  
-![MiRother-fin](../../assets/MiRother-fin.png)
+![MiRother-fin](../../assets/HomeNetwork/mirother/MiRother-fin.png)

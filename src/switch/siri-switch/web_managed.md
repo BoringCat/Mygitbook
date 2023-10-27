@@ -12,7 +12,7 @@ description: Web_Managed
 
 **VLAN有关菜单**
 
-![&#x83DC;&#x5355;](../../.gitbook/assets/Left_Label.png)
+![&#x83DC;&#x5355;](../../assets/switch/siri-switch/Left_Label.png)
 
 ### VLAN设置
 
@@ -21,7 +21,7 @@ description: Web_Managed
 
 **界面**
 
-![](../../.gitbook/assets/Vlan_Configure.png)
+![](../../assets/switch/siri-switch/Vlan_Configure.png)
 
 
 
@@ -58,7 +58,7 @@ description: Web_Managed
 
 **界面**
 
-![](../../.gitbook/assets/VlanPort_Configure.png)
+![](../../assets/switch/siri-switch/VlanPort_Configure.png)
 
 **界面元素解释**
 

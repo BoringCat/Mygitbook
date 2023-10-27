@@ -37,4 +37,4 @@
 
 ### 小米路由器R2D switch端口与物理端口对应
 **注：“Lan”与“Wan”均为出厂默认，数字为对应端口号**  
-![MiRother2-switch](../../assets/MiRother2-switch.png)
+![MiRother2-switch](../../assets/HomeNetwork/mirother/MiRother2-switch.png)

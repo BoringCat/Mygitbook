@@ -50,22 +50,23 @@ openwrt-simple-obfs的依赖有 libev、libpthread.
 + **初始化**  
 启动并连接到路由器，打开浏览器进入路由器Luci管理界面(默认为192.168.1.1)。  
 无Luci界面可用uci进行配置，具体配置方法可查询wiki [luci-app-shadowsocks - wiki - Use UCI system](https://github.com/shadowsocks/luci-app-shadowsocks/wiki/Use-UCI-system)  
-选择服务--->影梭，进入到SS的控制界面。  ![GotoSetting](../../.gitbook/assets/SS-GotoSetting.png)  
-点击"服务器管理"，删除名为simple的服务器配置(或直接点"修改")，然后点击"添加"新建服务器配置![NewServer](../../.gitbook/assets/SS-NewServer.png)  
+选择服务--->影梭，进入到SS的控制界面。  
+![GotoSetting](../../assets/lede/Common_options/SS-GotoSetting.png)  
+点击"服务器管理"，删除名为simple的服务器配置(或直接点"修改")，然后点击"添加"新建服务器配置![NewServer](../../assets/lede/Common_options/SS-NewServer.png)  
 在编辑服务器界面，需要输入  
->你的服务器别名 (可选)  
->Tcp 快速打开 (Tcp fast open)(我记得这个选项在服务器端不是去掉了吗？)(根据服务器配置选择)  
->Tcp 无延时 (新版本出来的选项，没用过)(根据服务器配置选择)  
->服务器地址 (必须)  
->服务器端口 (必须)  
->连接超时 (若服务器响应比较慢，可设置较大的数值)  
->密码 (必须)  
->直接密钥 (可选)  
->加密方式 (必须)  
->插件名称 (可选)  
->插件参数 (可选)  
->插件在[进阶](#进阶)里面讲到  
->![EditServer](../../.gitbook/assets/SS-EditServer.png)  
+> 你的服务器别名 (可选)  
+> Tcp 快速打开 (Tcp fast open)(我记得这个选项在服务器端不是去掉了吗？)(根据服务器配置选择)  
+> Tcp 无延时 (新版本出来的选项，没用过)(根据服务器配置选择)  
+> 服务器地址 (必须)  
+> 服务器端口 (必须)  
+> 连接超时 (若服务器响应比较慢，可设置较大的数值)  
+> 密码 (必须)  
+> 直接密钥 (可选)  
+> 加密方式 (必须)  
+> 插件名称 (可选)  
+> 插件参数 (可选)  
+> 插件在[进阶](#进阶)里面讲到  
+> ![EditServer](../../assets/lede/Common_options/SS-EditServer.png)  
 
 接着点击下方的"保存"，暂时在Luci中保存配置。  
 
@@ -92,7 +93,7 @@ openwrt-simple-obfs的依赖有 libev、libpthread.
 **\*该文档所有配置参考与 [luci-app-shadowsocks - wiki](https://github.com/shadowsocks/luci-app-shadowsocks/wiki)**
 1. 透明代理  
 要启动透明代理，需要在SS配置主界面设置透明代理的主服务器与UDP服务器(可选)  
-![Tramsparent-Proxy](../../.gitbook/assets/SS-Tramsparent-Proxy.png)
+![Tramsparent-Proxy](../../assets/lede/Common_options/SS-Tramsparent-Proxy.png)
 
 2. GFWlist  
 GFWlist用于排除DNS干扰，需配合dnsmasq使用[(Wiki)](https://github.com/shadowsocks/luci-app-shadowsocks/wiki/GfwList-Support)  
@@ -101,7 +102,7 @@ GFWlist用于排除DNS干扰，需配合dnsmasq使用[(Wiki)](https://github.com
 3、运行 gfwlist2dnsmasq.sh 生成dnsmasq配置文件。命令：`gfwlist2dnsmasq.sh -p 5300 -o /etc/dnsmasq.d/gfwlist` (-p 5300为SS端口转发的本地端口)。  
 4、重启dnsmasq，使配置生效。  
 5、在SS配置主界面设置端口转发的服务器与目标地址，若要更改本地端口，需要同步更改gfwlist2dnsmasq的命令。  
-![Port-forward](../../.gitbook/assets/SS-Port-forward.png)  
+![Port-forward](../../assets/lede/Common_options/SS-Port-forward.png)  
 6(Luci)、自动更新gfwlist。在Luci的 系统 ---> 计划任务中添加一条`30    4     *     *     0     /root/gfwlist2dnsmasq.sh -p 5300 -o /etc/dnsmasq.d/gfwlist>/dev/null 2>&1`  
 6(tty)、在`/etc/crontabs/root`中添加一行`30    4     *     *     0     /root/gfwlist2dnsmasq.sh -p 5300 -o /etc/dnsmasq.d/gfwlist>/dev/null 2>&1`。若无此文件，则新建该文件并在shell中输入`echo root > /etc/crontabs/cron.update`，最后启动crontab计划任务`/etc/init.d/cron start`  
 

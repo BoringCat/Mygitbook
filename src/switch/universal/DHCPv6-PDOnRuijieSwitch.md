@@ -59,9 +59,9 @@ Ruijie#
 
 ## 3. 验证配置
    1. 保持OpenWRT默认配置不变，删除`/etc/config/network`的ULA前缀，通过LUCI确认DHCPv6-PD正常分配，并且br-lan接口获得ipv6地址  
-   ![OpenWrt-PD](../../.gitbook/assets/OpenWRT_PD.jpg)
+   ![OpenWrt-PD](../../assets/switch/universal/OpenWRT_PD.jpg)
    2. 打开Windows的 `控制面板\网络和 Internet\网络连接` 查看网络连接详细信息，确认客户端已获取Ipv6地址  
-   ![Win10Ipv6](../../.gitbook/assets/Windows10-Ipv6.png)
+   ![Win10Ipv6](../../assets/switch/universal/Windows10-Ipv6.png)
 
 ## 4. 个人总结
 * 锐捷三层交换机可进行IA_PD分配，但是无法添加静态路由。思科有命令：`ipv6 dhcp iapd-route-add`，但是锐捷没有  

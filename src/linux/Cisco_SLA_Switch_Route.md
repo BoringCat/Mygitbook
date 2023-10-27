@@ -9,7 +9,7 @@
 CHECKSUM：6b89d0d804e1f2bb5b8bda66b5692047  
 
 **拓扑：**  
-![拓扑](../.gitbook/assets/Cisco-SLA-map.png)
+![拓扑](../assets/linux/Cisco-SLA-map.png)
 
 **线路连接：**  
 R4 F0/0 ---> R2 F0/0  

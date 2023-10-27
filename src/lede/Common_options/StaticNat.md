@@ -7,7 +7,7 @@
 - [实验成果图片](#实验成果图片)
 
 ### 网络拓扑
-![拓扑](../../.gitbook/assets/SNAT-Network.png)  
+![拓扑](../../assets/lede/Common_options/SNAT-Network.png)  
 ### 配置文件
 **/etc/config/firewall**
 ```
@@ -26,21 +26,21 @@ config redirect
 ```
 
 **LUCI**  
-![LUCI-network-firewall-forwards](../../.gitbook/assets/SNAT-forwards.png)  
+![LUCI-network-firewall-forwards](../../assets/lede/Common_options/SNAT-forwards.png)  
 
 ### 实验过程
 > #### 0. 建立实验环境
 > **Rother:**  
-![Rother-IpInfo](../../.gitbook/assets/SNAT-Rother-IpInfo.png)  
+![Rother-IpInfo](../../assets/lede/Common_options/SNAT-Rother-IpInfo.png)  
 > **Host1:**  
-![Host1-IpInfo](../../.gitbook/assets/SNAT-Host1-IpInfo.png)  
+![Host1-IpInfo](../../assets/lede/Common_options/SNAT-Host1-IpInfo.png)  
 > **Host2:**  
-![Host2-IpInfo](../../.gitbook/assets/SNAT-Host2-IpInfo.png)  
+![Host2-IpInfo](../../assets/lede/Common_options/SNAT-Host2-IpInfo.png)  
 > #### 1. 启动虚拟机并更改hostname
 >将各虚拟机按照拓扑命名
 > #### 2. 配置DHCP保留地址
 >在 Rother 的 DHCP and DNS / Static Leases 中设置 Host1 和 Host2 的保留地址为 192.168.1.100 和 192.168.1.200  
-![Rother-DHCP](../../.gitbook/assets/SNAT-Rother-DHCP.png)  
+![Rother-DHCP](../../assets/lede/Common_options/SNAT-Rother-DHCP.png)  
 > #### 3. 按照官网的[Wiki](https://openwrt.org/docs/guide-user/firewall/firewall_configuration#simple_dmz_rule)配置简单的DHZ规则
 >在 Rother 的 /etc/config/firewall 中加入以下内容
 > ```
@@ -131,7 +131,7 @@ config redirect
 执行命令 `ping 110.65.96.121` 与 `ping 110.65.96.217` 得到 ttl=63 的正确值。  
 断开 Host2 的 网络连接后确认到 `ping 110.65.96.217` 超时，并且 Host2 内置的 LUCI 页面也无法打开。
 ### 实验成果图片
-![ArchLinux-Rother](../../.gitbook/assets/SNAT-ArchLinux-Rother.png)  
-![ArchLinux-Host1](../../.gitbook/assets/SNAT-ArchLinux-Host1.png)  
-![ArchLinux-Host2](../../.gitbook/assets/SNAT-ArchLinux-Host2.png)  
-![Windows 7 All](../../.gitbook/assets/SNAT-Windows7-All.png)  
+![ArchLinux-Rother](../../assets/lede/Common_options/SNAT-ArchLinux-Rother.png)  
+![ArchLinux-Host1](../../assets/lede/Common_options/SNAT-ArchLinux-Host1.png)  
+![ArchLinux-Host2](../../assets/lede/Common_options/SNAT-ArchLinux-Host2.png)  
+![Windows 7 All](../../assets/lede/Common_options/SNAT-Windows7-All.png)  

@@ -13,11 +13,11 @@
 ## 手动破解
 1. 打开光猫管理页，确认设备型号、系统版本
 2. 打开 `http://<光猫管理地址>:8080` 确认有web页面返回  
-   ![光猫管理页](../../.gitbook/assets/telecom-8080page.png)  
+   ![光猫管理页](../../assets/HomeNetwork/Telecom/telecom-8080page.png)  
    或（如果你在安徽？）  
-   ![光猫管理页-Anhui](../../.gitbook/assets/telecom-8080page-AnHui.png)  
+   ![光猫管理页-Anhui](../../assets/HomeNetwork/Telecom/telecom-8080page-AnHui.png)  
    或（如果你在长青油田？、贵州广电？）  
-   ![光猫管理页-什么鬼](../../.gitbook/assets/telecom-8080page-what.png)  
+   ![光猫管理页-什么鬼](../../assets/HomeNetwork/Telecom/telecom-8080page-what.png)  
 3. 打开 `http://<光猫管理地址>:8080/cgi-bin/baseinfoSet.cgi` 确认有 json 内容返回
 4. 找到键 "baseinfoSet_TELECOMACCOUNT" 与 "baseinfoSet_TELECOMPASSWORD"，分别代表超级管理员的用户名和密码
 5. 对 "baseinfoSet_TELECOMPASSWORD" 进行密码逆运算  

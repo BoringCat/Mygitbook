@@ -43,9 +43,9 @@
 
 ### 4、验证  
 1. 在 Magisk 的“模块”中能看到 “Xposed Framework (SDK XX)” 是激活状态的  
-![Magisk-Modes](../../.gitbook/assets/Magisk-Modes.png)
+![Magisk-Modes](../../assets/phone/Mi5-Miui9-SDK24/Magisk-Modes.png)
 2. 打开Xposed Installer可以看到 “Xposed 框架 XX.X (Systemless) 版已激活”  
-![Xposed-Installer](../../.gitbook/assets/Xposed-Installer.png)
+![Xposed-Installer](../../assets/phone/Mi5-Miui9-SDK24/Xposed-Installer.png)
 
 ### 额外内容
 + **修复启用Xposed框架后手银行app闪退的问题**  

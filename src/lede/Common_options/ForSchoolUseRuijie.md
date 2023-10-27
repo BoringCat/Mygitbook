@@ -49,12 +49,12 @@ popd
 第四个输入内容：组播地址(0标准 1锐捷私有 2赛尔)  
 第五个输入内容：DHCP方式(0不使用 1二次认证 2认证后 3认证前)  
 接着按Ctrl+C结束进程，修改配置文件。  
->  ![MentoHust-loading](../../.gitbook/assets/MentoHust-loading.png)
+>  ![MentoHust-loading](../../assets/lede/Common_options/MentoHust-loading.png)
 >  
->`/etc/mentohust.conf`  
->其中：  
->  
->Username 是 用户名  
+> `/etc/mentohust.conf`  
+> 其中：  
+>   
+> Username 是 用户名  
 Nic 是 网卡名称(可通过`ifconfig`或`ip l`查看)  
 IP 是 验证要用的IP地址(默认填入所选网卡当前IP地址)(DHCP环境可以设为0.0.0.0)  
 Mask 是 子网掩码(默认填入所选网卡当前IP子网掩码)(DHCP环境可以设为0.0.0.0)  
@@ -77,17 +77,17 @@ DhcpScript 是 进行DHCP的脚本
 + 基本配置  
 进入LUCI后台，选择 服务(services) --> MentoHUST  
 默认界面如下：  
-![luci-app-mentohust-general](../../.gitbook/assets/luci-app-mentohust-general.png)  
+![luci-app-mentohust-general](../../assets/lede/Common_options/luci-app-mentohust-general.png)  
 输入你的用户名、密码，选择网卡接口以后 "保存并应用" 就可以进行验证了  
 (网卡接口是：网络(Network) --> 接口(Interfaces) 里面WAN口的物理接口)
 + 高级配置  
 ~~不修改都是默认~~  
 其中：IP地址(IP Address)、子网掩码(NetMark)、网关(GateWay)、DNS服务器(DNS Server) 都无关紧要（我全不要.jpg）  
 可能所需更改的选项仅为：组播地址类型 与 DHCP设置  
-![luci-app-mentohust-advanced](../../.gitbook/assets/luci-app-mentohust-advanced.png)  
+![luci-app-mentohust-advanced](../../assets/lede/Common_options/luci-app-mentohust-advanced.png)  
 所有选项均有提示文本(English version translate by Google)
 + 查看日志  
-都看到了吧：![luci-app-mentohust-select](../../.gitbook/assets/luci-app-mentohust-select.png)  
+都看到了吧：![luci-app-mentohust-select](../../assets/lede/Common_options/luci-app-mentohust-select.png)  
 点击一下就可以切换到日志界面了  
 再点一下就可以当成刷新了  
 没有日志的话是mentohust的没有清除stdout缓冲区，回到基本配置那边取消勾选"启用"，"保存并应用"后再回来看看 (或者修改mentohust的源码，再每个printf后面加上`fflush(stdout)`)  

@@ -48,5 +48,5 @@ fastboot boot $(recovery.img)            (这句可以直接引导进recovery)
 使用TWRP自带的恢复功能恢复data分区
 
 ### 6、尽情享受吧
-![高级设置](../../.gitbook/assets/Advanced-Setting.png)  
-![加密手机](../../.gitbook/assets/Encryption-Phone.png)
+![高级设置](../../assets/phone/Mi5-Miui9-SDK24/Advanced-Setting.png)  
+![加密手机](../../assets/phone/Mi5-Miui9-SDK24/Encryption-Phone.png)
