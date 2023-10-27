@@ -12,7 +12,7 @@ renderer = ["html"]
 
 [output.html]
 default-theme = "Rust"
-preferred-dark-theme = "Coal"
+preferred-dark-theme = "Ayu"
 git-repository-url = "https://github.com/boringcat/Mygitbook"
 git-repository-icon = "fa-github"
 copy-fonts = false

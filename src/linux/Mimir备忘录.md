@@ -539,9 +539,9 @@ query_scheduler: *disabled
       - hosts:
         - '*.doo.foo'
         secretName: ssl-doo-foo
+    ```
 
     </details>
-    ```
 - `coredns` Corefile
   ```ini
   .:53 {
