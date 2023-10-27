@@ -41,7 +41,7 @@ config redirect
 > #### 2. 配置DHCP保留地址
 >在 Rother 的 DHCP and DNS / Static Leases 中设置 Host1 和 Host2 的保留地址为 192.168.1.100 和 192.168.1.200  
 ![Rother-DHCP](../../assets/lede/Common_options/SNAT-Rother-DHCP.png)  
-> #### 3. 按照官网的[Wiki](https://openwrt.org/docs/guide-user/firewall/firewall_configuration#simple_dmz_rule)配置简单的DHZ规则
+> #### 3. 按照官网的<a href="https://openwrt.org/docs/guide-user/firewall/firewall_configuration#simple_dmz_rule" target="_blank">Wiki</a>配置简单的DHZ规则
 >在 Rother 的 /etc/config/firewall 中加入以下内容
 > ```
 > config redirect

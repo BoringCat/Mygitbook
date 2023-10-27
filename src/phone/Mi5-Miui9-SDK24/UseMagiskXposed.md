@@ -14,7 +14,7 @@
 **3. 本文假设你已经解锁Bootloader并且拥有TWRP Recovery**  
 
 ### 1、下载Magisk
-[Magisk — XdaDevelopers](https://forum.xda-developers.com/apps/magisk)  
+<a href="https://forum.xda-developers.com/apps/magisk" target="_blank">Magisk — XdaDevelopers</a>  
 
 ### 2、刷入Magisk
 1. 进入TWRP Recovery

@@ -6,6 +6,10 @@ language = "zh-cmn-Hans"
 multilingual = false
 src = "src"
 
+[preprocessor.last-changed]
+command = "mdbook-last-changed"
+renderer = ["html"]
+
 [output.html]
 default-theme = "Rust"
 preferred-dark-theme = "Coal"

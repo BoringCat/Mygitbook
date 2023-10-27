@@ -18,13 +18,13 @@
 
 ## 编译与安装
 ### 获取源码（编译脚本）
-在Git上拉[minieap-openwrt](https://github.com/BoringCat/minieap-openwrt))代码
+在Git上拉<a href="https://github.com/BoringCat/minieap-openwrt" target="_blank">minieap-openwrt</a>)代码
 
 ```
 git clone https://github.com/BoringCat/minieap-openwrt.git package/minieap
 ```
 
-（可选）在Git上拉[luci-app-minieap](https://github.com/BoringCat/luci-app-minieap)代码
+（可选）在Git上拉<a href="https://github.com/BoringCat/luci-app-minieap" target="_blank">luci-app-minieap</a>代码
 
 ```
 git clone https://github.com/BoringCat/luci-app-minieap.git package/luci-app-minieap
@@ -55,7 +55,7 @@ popd
 4. 若没有错误就可以使用 `find -name '*minieap*.ipk' -type f` 找到ipk文件)  
 
 ### 奇奇怪怪的方法
-* [配合 toolchain 使用方法（需要交叉编译基础）](https://github.com/BoringCat/minieap-openwrt#%E9%85%8D%E5%90%88-toolchain-%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95%E9%9C%80%E8%A6%81%E4%BA%A4%E5%8F%89%E7%BC%96%E8%AF%91%E5%9F%BA%E7%A1%80)
+* <a href="https://github.com/BoringCat/minieap-openwrt#%E9%85%8D%E5%90%88-toolchain-%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95%E9%9C%80%E8%A6%81%E4%BA%A4%E5%8F%89%E7%BC%96%E8%AF%91%E5%9F%BA%E7%A1%80" target="_blank">配合 toolchain 使用方法（需要交叉编译基础）</a>
 
 
 ### 安装

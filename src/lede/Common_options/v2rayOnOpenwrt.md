@@ -7,9 +7,9 @@
 - [透明代理](#透明代理)
 
 ### 安装
-0. [**官方安装文档**](https://www.v2ray.com/chapter_00/install.html)
+0. <a href="https://www.v2ray.com/chapter_00/install.html" target="_blank">**官方安装文档**</a>
 
-1. 下载对于版本的压缩包 [v2ray-core/releases](https://github.com/v2ray/v2ray-core/releases)  
+1. 下载对于版本的压缩包 <a href="https://github.com/v2ray/v2ray-core/releases" target="_blank">v2ray-core/releases</a>  
 
 2. 解压，复制各文件到指定位置  
 
@@ -34,7 +34,7 @@
    ```
 
 ### 配置（无LUCI）
-0. [**官方配置文件文档**](https://www.v2ray.com/chapter_02/)  
+0. <a href="https://www.v2ray.com/chapter_02/" target="_blank">**官方配置文件文档**</a>  
 
 1. 配置文件全部名称
    ``` json
@@ -63,7 +63,7 @@
    ```
 
 ### 透明代理
-0. [**官方配置文件文档**]([https://www.v2ray.com/chapter_02/](https://toutyrater.github.io/app/transparent_proxy.html))  
+0. [**官方配置文件文档**](<a href="https://toutyrater.github.io/app/transparent_proxy.html" target="_blank">https://www.v2ray.com/chapter_02/</a>)  
 
 1. 设置inbounds
    ```json
@@ -84,7 +84,7 @@
 |配置项|备注|
 |:-:|:-:|
 |port|透明代理的端口，可以选个你喜欢的，只要路由器内部不冲突|
-|protocol|必须是 `dokodemo-door` ([任意门](https://www.v2ray.com/chapter_02/protocols/dokodemo.html))
+|protocol|必须是 `dokodemo-door` (<a href="https://www.v2ray.com/chapter_02/protocols/dokodemo.html" target="_blank">任意门</a>)
 |settings.followRedirect|这里要为 true 才能接受来自 iptables 的流量|
 
 2. 设置全部outbounds(blackhole除外)
@@ -105,7 +105,7 @@
    _想要简单，就在v2ray配置文件里面写路由。需要快，就手撸iptables_
 
    1. v2ray自带路由  
-      [**官方文档**](https://www.v2ray.com/chapter_02/03_routing.html)  
+      <a href="https://www.v2ray.com/chapter_02/03_routing.html" target="_blank">**官方文档**</a>  
       路由配置名称：
       ``` json
       "rother": {

@@ -14,7 +14,7 @@
 ps:神TM小米路由器SSH设置静态路由重启失效
 ***
 ### 准备开搞
-首先当然是去“[MiWiFi – 开放平台](http://www.miwifi.com/miwifi_open.html)”（在小米路由器的DNS劫持下要输入 www1.miwifi.com）申请开启SSH，然后下载开启SSH的bin文件。按照页面给出的刷入方式搞进去，等路由器重启以后就能用页面给的root密码登录进去了。  
+首先当然是去“<a href="http://www.miwifi.com/miwifi_open.html" target="_blank">MiWiFi – 开放平台</a>”（在小米路由器的DNS劫持下要输入 www1.miwifi.com）申请开启SSH，然后下载开启SSH的bin文件。按照页面给出的刷入方式搞进去，等路由器重启以后就能用页面给的root密码登录进去了。  
 接着当然是先改root密码，毕竟8位随机字母加数字的密码你记也记不住。
 ### 第一次尝试
 **小米路由器的LUCI是魔改的！不能改switch配置！**  

@@ -7,7 +7,7 @@
 - [进阶（无LUCI）](#进阶无luci)
 
 #### 编译与安装
-1. 在Git上拉[MentoHUST-OpenWrt-ipk](https://github.com/BoringCat/MentoHUST-OpenWrt-ipk)代码
+1. 在Git上拉<a href="https://github.com/BoringCat/MentoHUST-OpenWrt-ipk" target="_blank">MentoHUST-OpenWrt-ipk</a>代码
 ```
 pushd package
 git clone https://github.com/BoringCat/MentoHUST-OpenWrt-ipk.git
@@ -17,7 +17,7 @@ git checkout LEDE-17+ # 未测试
 popd
 popd
 ```
-2. （可选）在Git上拉[luci-app-mentohust](https://github.com/BoringCat/luci-app-mentohust)代码  
+2. （可选）在Git上拉<a href="https://github.com/BoringCat/luci-app-mentohust" target="_blank">luci-app-mentohust</a>代码  
 ```
 git clone https://github.com/BoringCat/luci-app-mentohust.git package/luci-app-mentohust
 # 编译 po2lmo (如果有po2lmo可跳过)
@@ -101,7 +101,7 @@ DhcpScript 是 进行DHCP的脚本
 #### 进阶（无LUCI）
 + 开机脚本  
 **注：使用开机脚本运行mentohust必须在配置文件中将DaemonMode设为非0**  
-由于 [MentoHUST-OpenWrt-ipk](https://github.com/KyleRicardo/MentoHUST-OpenWrt-ipk) 并没有init.d脚本，所以..............不装 luci-app-mentohust 就无法实现原生开机自启。只能写在rc.local中  
+由于 <a href="https://github.com/KyleRicardo/MentoHUST-OpenWrt-ipk" target="_blank">MentoHUST-OpenWrt-ipk</a> 并没有init.d脚本，所以..............不装 luci-app-mentohust 就无法实现原生开机自启。只能写在rc.local中  
 在rc.local中直接添加`mentohust`后又发现，经常无法自启。查原因发现是由于网卡未初始化mentohust就以及开始进行认证...................  
 于是修改开机脚本为先判断指定网卡是否有IP地址(通过ip或ip-full包)  
 网卡以eth0为例  

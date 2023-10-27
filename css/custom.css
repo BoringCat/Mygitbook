@@ -7,6 +7,23 @@ h2, h3 {
 .table-wrapper {
   display: inline-block;
 }
+.content p {
+  margin: 0;
+}
+:not(pre):not(a) > .hljs  {
+  color: var(--sidebar-active);
+  background: var(--sidebar-bg);
+}
+footer#last-change {
+  font-size: 90%;
+  opacity: 0.75;
+  text-align: center;
+}
+blockquote {
+  background-image: repeating-linear-gradient(90deg, var(--quote-border), var(--quote-border) 1.5rem, transparent 1.5rem, transparent);
+  background-color: transparent;
+  border: 0;
+}
 @media (min-width: 900px){
   :root {
     --content-max-width: 80%;

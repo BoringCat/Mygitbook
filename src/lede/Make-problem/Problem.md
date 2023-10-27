@@ -50,7 +50,7 @@ make[6]: *** [Makefile:423: create_inode.o] Error 1
 ```
 Google到这是 glibc 升级到 2.27 后导致的  
 查看glibc版本的方法：`ldd --version` 或通过包管理器参看  
-解决方案：(来源：[tools/e2fsprogs: fix building on a glibc 2.27 host (58a95f0f) · Commits · XetalKinsei / Xetal7688 / Xetal7688-Lede · GitLab](http://xetal.ddns.net:81/Kinsei/Xetal7688/Xetal7688-Lede/commit/58a95f0f8ff768b43d68eed2b6a786e0f40f723b))  
+解决方案：(来源：<a href="http://xetal.ddns.net:81/Kinsei/Xetal7688/Xetal7688-Lede/commit/58a95f0f8ff768b43d68eed2b6a786e0f40f723b" target="_blank">tools/e2fsprogs: fix building on a glibc 2.27 host (58a95f0f) · Commits · XetalKinsei / Xetal7688 / Xetal7688-Lede · GitLab</a>)  
 将与此MarkDown文件位于同一目录下的 [`005-misc-rename-copy_file_range-to-copy_file_chunk.patch`](005-misc-rename-copy_file_range-to-copy_file_chunk.patch) 复制到编译目录的 `tools/e2fsprogs/patches/` 下  
 ``` shell
 cp 005-misc-rename-copy_file_range-to-copy_file_chunk.patch $CodePath/tools/e2fsprogs/patches/
@@ -94,7 +94,7 @@ _**PS：建议在新终端内执行，不然你的补全将变得很奇怪 (特�
 ``` shell
 env: 'time': No such file or directory
 ```
-这是缺少GNU time的原因 [(原文地址)](https://bugs.openwrt.org/index.php?do=details&task_id=1918&status%5B0%5D=&pagenum=2) 安装相应包就好了  
+这是缺少GNU time的原因 <a href="https://bugs.openwrt.org/index.php?do=details&task_id=1918&status%5B0%5D=&pagenum=2" target="_blank">(原文地址)</a> 安装相应包就好了  
 例如 Archlinux 就是安装 time 包
 
 ---
@@ -127,7 +127,7 @@ unwind-dw2.c 文件的第40-42行，如果有安装sdt则引用 sys/sdt.h ：
 ```
 但交叉编译的 include/sys 文件夹里面没有 sdt.h 头文件，于是报错  
 解决方案：将系统的 sdt.h 文件链接到 include/sys 内  
-[原句](https://github.com/openwrt/packages/issues/296#issuecomment-371704322):`create soft link from system /usr/include/sys/sdt.h to openwrt statding_dir/toolchain/include/sys/sdt.h`  
+<a href="https://github.com/openwrt/packages/issues/296#issuecomment-371704322" target="_blank">原句</a>:`create soft link from system /usr/include/sys/sdt.h to openwrt statding_dir/toolchain/include/sys/sdt.h`  
 以X86为例  
 ``` shell
 ln -s /usr/include/sys/sdt.h staging_dir/toolchain-x86_64_gcc-5.4.0_musl-1.1.16/include/sys/sdt.h

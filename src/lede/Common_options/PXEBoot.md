@@ -37,7 +37,7 @@
 2. 在 `/opt/pxe/syslinux/bios` 中新建文件夹 `pxelinux.cfg`  
 3. 在一台使用syslinux引导的电脑上复制 `syslinux.cfg` 以及这个配置文件所需要的全部文件到路由器上的 `/opt/pxe/syslinux/bios/pxelinux.cfg/` 并重命名 `syslinux.cfg` 为 `default`  
 
-4. 修改 `/opt/pxe/syslinux/bios/pxelinux.cfg/default` 为PXE的引导文件 (可参照[PXELINUX - Syslinux Wiki](http://www.syslinux.org/wiki/index.php?title=PXELINUX))  
+4. 修改 `/opt/pxe/syslinux/bios/pxelinux.cfg/default` 为PXE的引导文件 (可参照<a href="http://www.syslinux.org/wiki/index.php?title=PXELINUX" target="_blank">PXELINUX - Syslinux Wiki</a>)  
    例：
    ``` syslinux
    ...
@@ -57,7 +57,7 @@
    dhcp-match=set:efi-x86_64,option:client-arch,9
    dhcp-boot=tag:efi-x86_64,bootx64.efi
    ```
-   关于`client-arch`的值可在 [iPXE - open source boot firmware#notes](http://ipxe.org/cfg/platform#notes) 以及 [RFC 4578#page-3](https://tools.ietf.org/html/rfc4578#page-3) 中查询
+   关于`client-arch`的值可在 <a href="http://ipxe.org/cfg/platform#notes" target="_blank">iPXE - open source boot firmware#notes</a> 以及 <a href="https://tools.ietf.org/html/rfc4578#page-3" target="_blank">RFC 4578#page-3</a> 中查询
 
 3. 将WinPE的WIM文件以及SDI文件复制到路由器的 `/opt/pxe/boot` 文件夹内
 

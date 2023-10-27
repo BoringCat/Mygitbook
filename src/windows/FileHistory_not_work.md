@@ -16,7 +16,7 @@
   ```
 
 ### 问题原因
-原文：[历史文件记录的备份功能为何不能正常使用](https://answers.microsoft.com/zh-hans/windows/forum/windows_8-security/%E5%8E%86%E5%8F%B2%E6%96%87%E4%BB%B6%E8%AE%B0/d200311e-9329-4355-8383-5c0e4948dbbb?messageId=3eebf5e6-a85b-4818-b0b2-c4bf692d118d)
+原文：<a href="https://answers.microsoft.com/zh-hans/windows/forum/windows_8-security/%E5%8E%86%E5%8F%B2%E6%96%87%E4%BB%B6%E8%AE%B0/d200311e-9329-4355-8383-5c0e4948dbbb?messageId=3eebf5e6-a85b-4818-b0b2-c4bf692d118d" target="_blank">历史文件记录的备份功能为何不能正常使用</a>
 
 很有可能是因为需要备份的某些文件夹中包含的文件或文件夹名称中带有无法支持的字符，导致该功能无法正常工作。
 

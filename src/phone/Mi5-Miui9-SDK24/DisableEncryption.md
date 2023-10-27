@@ -13,11 +13,11 @@
 
 ### 0、解锁Bootloader
 ~~_**你都要折腾手机了居然不去解锁 (ﾉ ○ Д ○)ﾉ**_~~  
-在这里：[申请解锁小米手机](http://www.miui.com/unlock/index.html)
+在这里：<a href="http://www.miui.com/unlock/index.html" target="_blank">申请解锁小米手机</a>
 
 ### 1、刷入 TWRP Recovery
 这是写这篇文档时我能找到的最新的 TWRP Recovery（支持简体中文）：
-[TWRP for gemini](https://dl.twrp.me/gemini/)  
+<a href="https://dl.twrp.me/gemini/" target="_blank">TWRP for gemini</a>  
 主要更改语言位置：  
 1. 在第一次进入Recovery时，会询问是否保持System分区的只读状态。这时候可以选右边的“Select Language”选项，然后拉到最上方选择“Chinese(simplified)”  
 2. 在主界面选择“Settings”，然后选上方最后一个地球图标的按钮，接着找到并选择“Chinese(simplified)”，按下下方“Set Language”按钮  

@@ -21,7 +21,7 @@
 3. 修改后需要重启 `salt-master` (在 systemd 环境下没有发现 ExecReload)
 
 #### /srv/salt/top.sls
-官方文档: [THE TOP FILE](https://docs.saltstack.com/en/master/ref/states/top.html)
+官方文档: <a href="https://docs.saltstack.com/en/master/ref/states/top.html" target="_blank">THE TOP FILE</a>
 
 1. 基础配置（最简单方便的配置）
    ```yaml

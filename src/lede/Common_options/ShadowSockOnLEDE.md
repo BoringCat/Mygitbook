@@ -7,10 +7,10 @@
 
 #### 编译与安装  
 1. 在Git上拉取编译SS所需的代码和依赖  
-[shadowsocks/openwrt-feeds](https://github.com/shadowsocks/openwrt-feeds)  
-[shadowsocks/openwrt-shadowsocks](https://github.com/shadowsocks/openwrt-shadowsocks)  
-[shadowsocks/luci-app-shadowsocks](https://github.com/shadowsocks/luci-app-shadowsocks)  
-(可选)[aa65535/openwrt-simple-obfs](https://github.com/aa65535/openwrt-simple-obfs)  
+<a href="https://github.com/shadowsocks/openwrt-feeds" target="_blank">shadowsocks/openwrt-feeds</a>  
+<a href="https://github.com/shadowsocks/openwrt-shadowsocks" target="_blank">shadowsocks/openwrt-shadowsocks</a>  
+<a href="https://github.com/shadowsocks/luci-app-shadowsocks" target="_blank">shadowsocks/luci-app-shadowsocks</a>  
+(可选)<a href="https://github.com/aa65535/openwrt-simple-obfs" target="_blank">aa65535/openwrt-simple-obfs</a>  
 ``` shell
 git clone https://github.com/shadowsocks/openwrt-feeds.git package/feeds
 git clone https://github.com/shadowsocks/openwrt-shadowsocks.git package/shadowsocks-libev
@@ -49,7 +49,7 @@ openwrt-simple-obfs的依赖有 libev、libpthread.
 #### 配置
 + **初始化**  
 启动并连接到路由器，打开浏览器进入路由器Luci管理界面(默认为192.168.1.1)。  
-无Luci界面可用uci进行配置，具体配置方法可查询wiki [luci-app-shadowsocks - wiki - Use UCI system](https://github.com/shadowsocks/luci-app-shadowsocks/wiki/Use-UCI-system)  
+无Luci界面可用uci进行配置，具体配置方法可查询wiki <a href="https://github.com/shadowsocks/luci-app-shadowsocks/wiki/Use-UCI-system" target="_blank">luci-app-shadowsocks - wiki - Use UCI system</a>  
 选择服务--->影梭，进入到SS的控制界面。  
 ![GotoSetting](../../assets/lede/Common_options/SS-GotoSetting.png)  
 点击"服务器管理"，删除名为simple的服务器配置(或直接点"修改")，然后点击"添加"新建服务器配置![NewServer](../../assets/lede/Common_options/SS-NewServer.png)  
@@ -90,14 +90,14 @@ openwrt-simple-obfs的依赖有 libev、libpthread.
 4、保存并应用。  
 
 + **透明代理 + GFWlist + ignore\_list**  
-**\*该文档所有配置参考与 [luci-app-shadowsocks - wiki](https://github.com/shadowsocks/luci-app-shadowsocks/wiki)**
+**\*该文档所有配置参考与 <a href="https://github.com/shadowsocks/luci-app-shadowsocks/wiki" target="_blank">luci-app-shadowsocks - wiki</a>**
 1. 透明代理  
 要启动透明代理，需要在SS配置主界面设置透明代理的主服务器与UDP服务器(可选)  
 ![Tramsparent-Proxy](../../assets/lede/Common_options/SS-Tramsparent-Proxy.png)
 
 2. GFWlist  
-GFWlist用于排除DNS干扰，需配合dnsmasq使用[(Wiki)](https://github.com/shadowsocks/luci-app-shadowsocks/wiki/GfwList-Support)  
-1、下载[gfwlist2dnsmasq](https://github.com/cokebar/gfwlist2dnsmasq)脚本，用于更方便的生成 dnsmasq 配置文件。  
+GFWlist用于排除DNS干扰，需配合dnsmasq使用<a href="https://github.com/shadowsocks/luci-app-shadowsocks/wiki/GfwList-Support" target="_blank">(Wiki)</a>  
+1、下载<a href="https://github.com/cokebar/gfwlist2dnsmasq" target="_blank">gfwlist2dnsmasq</a>脚本，用于更方便的生成 dnsmasq 配置文件。  
 2、新建"/etc/dnsmasq.d"文件夹，并在"/etc/dnsmasq.conf"中加入`conf-dir=/etc/dnsmasq.d`使得dnsmasq加载 /etc/dnsmasq.d 目录下所有的配置。  
 3、运行 gfwlist2dnsmasq.sh 生成dnsmasq配置文件。命令：`gfwlist2dnsmasq.sh -p 5300 -o /etc/dnsmasq.d/gfwlist` (-p 5300为SS端口转发的本地端口)。  
 4、重启dnsmasq，使配置生效。  
@@ -107,7 +107,7 @@ GFWlist用于排除DNS干扰，需配合dnsmasq使用[(Wiki)](https://github.com
 6(tty)、在`/etc/crontabs/root`中添加一行`30    4     *     *     0     /root/gfwlist2dnsmasq.sh -p 5300 -o /etc/dnsmasq.d/gfwlist>/dev/null 2>&1`。若无此文件，则新建该文件并在shell中输入`echo root > /etc/crontabs/cron.update`，最后启动crontab计划任务`/etc/init.d/cron start`  
 
 3. ignore\_list  
-启用了透明代理后默认所有流量都代理到SS服务器，这不仅会加大服务器负担，还会白白浪费流量，减慢访问国内网页的速度。这就需要我们忽略掉对国内IP的代理。[(Wiki)](https://github.com/shadowsocks/luci-app-shadowsocks/wiki/use-crontab-to-update-the-ignore.list)  
+启用了透明代理后默认所有流量都代理到SS服务器，这不仅会加大服务器负担，还会白白浪费流量，减慢访问国内网页的速度。这就需要我们忽略掉对国内IP的代理。<a href="https://github.com/shadowsocks/luci-app-shadowsocks/wiki/use-crontab-to-update-the-ignore.list" target="_blank">(Wiki)</a>  
 1、按Wiki内容新建`update_ignore_list`脚本。  
 终端配置计划任务方法：在`/etc/crontabs/root`中添加一行`30    4     *     *     0     /root/update_ignore_list>/dev/null 2>&1`。若无此文件，则新建该文件并在shell中输入`echo root > /etc/crontabs/cron.update`，最后启动crontab计划任务`/etc/init.d/cron start`  
 2、手动更新一次ignore_list.  

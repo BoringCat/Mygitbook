@@ -41,7 +41,7 @@ Address: ::
 ## 搭建方法
 **\* 本文使用Docker-Compose，纯Docker的方法也是一样的**
 ### 1. 配置Docker-Compose
-详情请参考：[goofball222/dns-over-https#Usage](https://hub.docker.com/r/goofball222/dns-over-https#Usage)
+详情请参考：<a href="https://hub.docker.com/r/goofball222/dns-over-https#Usage" target="_blank">goofball222/dns-over-https#Usage</a>
 ```yaml
 version: '2'
 services:
