@@ -145,7 +145,7 @@ EOF
     [ "$comfirm" != "Y" ] && [ "$comfirm" != "y" ] && return 0
     pip install powerline-status
     su - boringcat << EOF
-    wget https://www.boringcat.top/linux/scripts/setzshrc.sh
+    wget https://www.brc.cool/linux/scripts/setzshrc.sh
     sh ./setzshrc.sh
     rm ./setzshrc.sh
 EOF
@@ -154,7 +154,7 @@ EOF
     read -p "Set .vimrc for boringcat? [Y/n] " comfirm
     [ "$comfirm" = "Y" ] || [ "$comfirm" = "y" ] && \
     su - boringcat << EOF
-    wget https://www.boringcat.top/linux/scripts/setvim.sh
+    wget https://www.brc.cool/linux/scripts/setvim.sh
     sh ./setvim.sh
     rm ./setvim.sh
 EOF
@@ -162,7 +162,7 @@ EOF
     read -p "Set .tmux.conf for boringcat? [Y/n] " comfirm
     [ "$comfirm" = "Y" ] || [ "$comfirm" = "y" ] && \
     su - boringcat << EOF
-    wget https://www.boringcat.top/linux/scripts/settmux.sh
+    wget https://www.brc.cool/linux/scripts/settmux.sh
     sh ./settmux.sh
     rm ./settmux.sh
 EOF
@@ -186,18 +186,18 @@ ifInstallPowerlineToRoot() {
     chmod +x install_zsh.sh
     ./install_zsh.sh --unattended --skip-chsh
     rm install_zsh.sh
-    wget https://www.boringcat.top/linux/scripts/setzshrc.sh
+    wget https://www.brc.cool/linux/scripts/setzshrc.sh
     sh ./setzshrc.sh
     rm ./setzshrc.sh
     read -p "Set .vimrc for root? [Y/n] " comfirm
     [ "$comfirm" = "Y" ] || [ "$comfirm" = "y" ] && \
-    wget https://www.boringcat.top/linux/scripts/setvim.sh
+    wget https://www.brc.cool/linux/scripts/setvim.sh
     sh ./setvim.sh
     rm ./setvim.sh
     comfirm=''
     read -p "Set .tmux.conf for boringcat? [Y/n] " comfirm
     [ "$comfirm" = "Y" ] || [ "$comfirm" = "y" ] && \
-    wget https://www.boringcat.top/linux/scripts/settmux.sh
+    wget https://www.brc.cool/linux/scripts/settmux.sh
     sh ./settmux.sh
     rm ./settmux.sh
 }

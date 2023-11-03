@@ -10,7 +10,7 @@ cd `dirname $0`
 docker build -f debug.dockerfile -t boringcat/node_vue:lts-alpine .
 ```
 
-#### debug,dockerfile
+#### debug.dockerfile
 ```dockerfile
 FROM node:lts-alpine
 

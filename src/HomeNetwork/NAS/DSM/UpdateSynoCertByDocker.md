@@ -72,7 +72,7 @@ service:
   ```sh
   ID="1Lk1Fl"
   CERTBOT_PATH="/volume2/docker/certbot/etc-letsencrypt"
-  DOMAIN="home.boringcat.top"
+  DOMAIN="home.brc.cool"
   
   archpath="/usr/syno/etc/certificate/_archive/${ID}"
   CERT_PATH="${CERTBOT_PATH}/live/${DOMAIN}"
