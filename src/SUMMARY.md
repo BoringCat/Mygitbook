@@ -59,3 +59,4 @@
    - [K3s备忘录](software/K3s备忘录.md)
    - [各类脚本](linux/各类脚本.md)
    - [zshrc备忘录](linux/zshrc.md)
+   - [Golang备忘录](program/golang/备忘录.md)
