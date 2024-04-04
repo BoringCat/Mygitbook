@@ -14,31 +14,53 @@
 - [最终效果](#最终效果)
 
 ## 查找硬盘
-首先，你得找到硬盘的逻辑设备，不是说页面上显示是第X块硬盘，设备就是 `/dev/sdX` 的。我这里是第1、3、5插槽，对应的设备是  /dev/sdf、/dev/sdg、/dev/sdi
+首先，你得找到硬盘的逻辑设备，不是说页面上显示是第X块硬盘，设备就是 `/dev/sdX` 的。我这里是第1、3、5插槽，对应的设备是  /dev/sdi、/dev/sdg、/dev/sde  
 ![HDDList.png](../../../assets/HomeNetwork/NAS/QNAP/HDDList.png)
 
-1. 打开存储与快照总管
-2. 选到 存储 => 磁盘/VJBOD
-3. 打开磁盘列表的 WWN 列  
-   ![OpenWWN.png](../../../assets/HomeNetwork/NAS/QNAP/OpenWWN.png)
-4. 复制你想要找的WWN
-5. 构建查找命令  
+1. 获取插槽ID
+2. 获取设备
    ```bash
-   grep -Ei '${WWN1}|${WWN2}|${WWN3}' /sys/block/*/device/wwid
+   ls -alhF /dev/qzfs/enc_0/disk_0x{1,3,5}_* | cut -d'>' -f2 | sed 's/.$//' | uniq
    ```
-6. 执行命令获得设备
 
 ## 查找阵列
 
 1. SSH登录NAS
-2. `cat /proc/mdstat` 获取阵列信息
-3. 找到包含硬盘逻辑设备的阵列，例如 md9、md13
-4. 记录下各阵列中的磁盘分区逻辑设备信息  
-   例如：
-    - md9: sdi1, sdf1, sdg1
-    - md13: sdi4, sdf4, sdg4
-    - md322: sdi5, sdf5, sdg5
-5. `cat /proc/swaps` 获取swap信息
+2. `cat /proc/mdstat` 获取阵列信息  
+   ```
+   md322 : active raid1 sde5[3](S) sdg5[2] sdi5[0]
+      32916992 blocks super 1.0 [2/2] [UU]
+      bitmap: 0/1 pages [0KB], 65536KB chunk
+
+   md321 : active raid1 sdd5[6](S) sdc5[5](S) sdb5[4](S) sda5[3](S) sdf5[2] sdh5[0]
+      32916992 blocks super 1.0 [2/2] [UU]
+      bitmap: 0/1 pages [0KB], 65536KB chunk
+
+   md13 : active raid1 sdf4[0] sdg4[130] sdi4[129] sde4[128] sdd4[5] sdc4[4] sda4[3] sdb4[2] sdh4[1]
+         458880 blocks super 1.0 [128/9] [UUUUUUUUU_______________________________________________________________________________________________________________________]
+         bitmap: 1/1 pages [4KB], 65536KB chunk
+
+   md9 : active raid1 sdf1[0] sdg1[130] sde1[129] sdi1[128] sdd1[5] sdc1[4] sda1[3] sdb1[2] sdh1[1]
+         530048 blocks super 1.0 [128/9] [UUUUUUUUU_______________________________________________________________________________________________________________________]
+         bitmap: 1/1 pages [4KB], 65536KB chunk
+   ```
+3. `cat /proc/swaps` 获取swap信息
+
+   | Filename | Type | Size | Used | Priority |
+   | :-       | :-   | :-   | :-   | :-       |
+   | `/dev/md321` | partition | 32916988 | xxx | -2 |
+   | `/dev/md322` | partition | 32916988 | 0 | -3 |
+
+4. 找到包含硬盘逻辑设备的阵列，例如 md9、md13、md322
+5. 记录下各阵列中的磁盘分区逻辑设备信息  
+   例如：  
+
+   | 阵列 | 设备 |
+   | -:    | :- |
+   | `md9`   | `sdi1` `sdg1` `sde1` |
+   | `md13`  | `sdi4` `sdg4` `sde4` |
+   | `md322` | `sdi5` `sdg5` `sde5` |
+
 
 ## 操作
 ### 从系统阵列中移除硬盘
@@ -48,11 +70,11 @@ mdadm /dev/mdX --fail /dev/sdYZ
 > 例如：
 > ```bash
 > mdadm /dev/md9 --fail /dev/sdi1
-> mdadm /dev/md9 --fail /dev/sdf1
 > mdadm /dev/md9 --fail /dev/sdg1
+> mdadm /dev/md9 --fail /dev/sde1
 > mdadm /dev/md13 --fail /dev/sdi4
-> mdadm /dev/md13 --fail /dev/sdf4
 > mdadm /dev/md13 --fail /dev/sdg4
+> mdadm /dev/md13 --fail /dev/sde4
 > ```
 
 ### 移除Swap阵列
@@ -70,11 +92,11 @@ mdadm --zero-superblock /dev/sdYZ
 > 例如：
 > ```bash
 > mdadm --zero-superblock /dev/sdi1
-> mdadm --zero-superblock /dev/sdf1
 > mdadm --zero-superblock /dev/sdg1
+> mdadm --zero-superblock /dev/sde1
 > mdadm --zero-superblock /dev/sdi4
-> mdadm --zero-superblock /dev/sdf4
 > mdadm --zero-superblock /dev/sdg4
+> mdadm --zero-superblock /dev/sde4
 > ```
 
 
