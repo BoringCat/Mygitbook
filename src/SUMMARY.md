@@ -51,6 +51,7 @@
 - [备忘录](Note.md)
    - [安装Mysql5.7](linux/mysql/Mysql57Install.md)
    - [使用xDroid作为抓包测试环境](linux/Android/使用xDroid作为抓包测试环境.md)
+   - [使用Waydroid作为抓包测试环境](linux/Android/使用Waydroid作为抓包测试环境.md)
    - [Fedora备忘录](linux/Fedora备忘录.md)
    - [Centos备忘录](linux/Centos备忘录.md)
    - [Docker备忘录](linux/Docker备忘录.md)
