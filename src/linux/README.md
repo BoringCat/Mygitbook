@@ -9,4 +9,4 @@
 - [Zabbix + ElasticSearch + ilm 解决方案](zabbix/zabbix_elastic_ilm.md)
 - [SaltStack 自动化运维](SaltStack/README.md)
 - [ProxmoxVE集群](ProxmoxVE/README.md)
-- [监控系统](Monitor.md)
+- [监控系统](Observability/)
