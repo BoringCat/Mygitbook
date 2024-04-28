@@ -54,6 +54,7 @@
    - [使用Waydroid作为抓包测试环境](linux/Android/使用Waydroid作为抓包测试环境.md)
    - [Fedora备忘录](linux/Fedora备忘录.md)
    - [Centos备忘录](linux/Centos备忘录.md)
+   - [ArchLinux备忘录](linux/ArchLinux备忘录.md)
    - [Docker备忘录](linux/Docker备忘录.md)
    - [Python备忘录](software/Python备忘录.md)
    - [NodeJs备忘录](software/nodejs备忘录.md)
