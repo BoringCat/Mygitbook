@@ -2,9 +2,11 @@
 - 系统类
   - [Fedora备忘录](linux/Fedora备忘录.md)
   - [Centos备忘录](linux/Centos备忘录.md)
+  - [ArchLinux备忘录](linux/ArchLinux备忘录.md)
 - 应用类
   - [安装Mysql5.7](linux/mysql/Mysql57Install.md)
   - [使用xDroid作为抓包测试环境](linux/Android/使用xDroid作为抓包测试环境.md)
+  - [使用Waydroid作为抓包测试环境](linux/Android/使用Waydroid作为抓包测试环境.md)
   - [各类脚本](linux/各类脚本.md)
   - [K3s备忘录](software/K3s备忘录.md)
   - [zshrc备忘录](linux/zshrc.md)
