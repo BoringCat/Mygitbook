@@ -45,6 +45,8 @@
       - [Zabbix + ElasticSearch + ilm 解决方案](linux/Observability/zabbix_elastic_ilm.md)
       - [Prometheus备忘录](linux/Observability/Prometheus备忘录.md)
       - [Mimir备忘录](linux/Observability/Mimir备忘录.md)
+   - [K8s](linux/Kubernetes/README.md)
+      - [权限与用户](linux/Kubernetes/权限与用户.md)
 - [Win日常](windows/README.md)
    - [文件历史记录备份不工作的问题](windows/FileHistory_not_work.md)
    - [让Win7更加好看](windows/MakeWin7Beatiful.md)
