@@ -67,15 +67,19 @@
 ```bash
 mdadm /dev/mdX --fail /dev/sdYZ
 ```
-> 例如：
-> ```bash
-> mdadm /dev/md9 --fail /dev/sdi1
-> mdadm /dev/md9 --fail /dev/sdg1
-> mdadm /dev/md9 --fail /dev/sde1
-> mdadm /dev/md13 --fail /dev/sdi4
-> mdadm /dev/md13 --fail /dev/sdg4
-> mdadm /dev/md13 --fail /dev/sde4
-> ```
+<details>
+<summary>例如</summary>
+
+```bash
+mdadm /dev/md9 --fail /dev/sdc1
+mdadm /dev/md9 --fail /dev/sdg1
+mdadm /dev/md9 --fail /dev/sde1
+mdadm /dev/md13 --fail /dev/sdc4
+mdadm /dev/md13 --fail /dev/sdg4
+mdadm /dev/md13 --fail /dev/sde4
+```
+
+</details>
 
 ### 移除Swap阵列
 <font color=red>**注意：如果你的系统中只有一个swap阵列，那就不应该移除它**</font>
@@ -89,16 +93,22 @@ mdadm --stop /dev/md32x
 ```bash
 mdadm --zero-superblock /dev/sdYZ
 ```
-> 例如：
-> ```bash
-> mdadm --zero-superblock /dev/sdi1
-> mdadm --zero-superblock /dev/sdg1
-> mdadm --zero-superblock /dev/sde1
-> mdadm --zero-superblock /dev/sdi4
-> mdadm --zero-superblock /dev/sdg4
-> mdadm --zero-superblock /dev/sde4
-> ```
+<details>
+<summary>例如</summary>
 
+```bash
+mdadm --zero-superblock /dev/sdc1
+mdadm --zero-superblock /dev/sdg1
+mdadm --zero-superblock /dev/sde1
+mdadm --zero-superblock /dev/sdc4
+mdadm --zero-superblock /dev/sdg4
+mdadm --zero-superblock /dev/sde4
+mdadm --zero-superblock /dev/sdc5
+mdadm --zero-superblock /dev/sdg5
+mdadm --zero-superblock /dev/sde5
+```
+
+</details>
 
 ## 最终效果
 那当然是响应速度极快  

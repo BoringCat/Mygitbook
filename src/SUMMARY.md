@@ -10,6 +10,7 @@
       - [群晖+certbot+docker更新证书](HomeNetwork/NAS/DSM/UpdateSynoCertByDocker.md)
    - [威联通](HomeNetwork/NAS/QNAP/README.md)
       - [从系统阵列中移除HDD](HomeNetwork/NAS/QNAP/RemoveHDDFromSysRaid.md)
+      - [解决 Container Station3 LXD权限问题](HomeNetwork/NAS/QNAP/ContainerStation3-LXD权限问题.md)
 - [折腾光猫](HomeNetwork/Telecom/README.md)
    - [电信天翼宽带家庭网关破解](HomeNetwork/Telecom/Hack_To_Telecom_device.md)
 - [搞LEDE](lede/README.md)
