@@ -1,5 +1,30 @@
 # ArchLinux备忘录 <!-- omit in toc -->
 
+- [配置Bitwarden为系统SSH Agnet](#配置bitwarden为系统ssh-agnet)
+- [升级Python版本](#升级python版本)
+- [字体](#字体)
+  - [软件包](#软件包)
+  - [配置](#配置)
+- [zram](#zram)
+
+## 配置Bitwarden为系统SSH Agnet
+1. 设置里开启  
+   ![启用SSH Agent](/assets/linux/20251027-Bitwarden启用SSHAgent.png)
+2. 配置环境变量
+   - rc文件
+     ```sh
+     if [[ -e "$HOME/.bitwarden-ssh-agent.sock" ]]; then
+       export SSH_AUTH_SOCK="$HOME/.bitwarden-ssh-agent.sock"
+     elif [[ -e "${XDG_RUNTIME_DIR}/ssh-agent.socket" ]]; then
+       export SSH_AUTH_SOCK="${XDG_RUNTIME_DIR}/ssh-agent.socket"
+     fi
+     ```
+   - systemd  
+     创建文件 `~/.config/environment.d/ssh-agent.conf`  
+     ```ini
+     SSH_AUTH_SOCK=$HOME/.bitwarden-ssh-agent.sock
+     ```
+
 ## 升级Python版本
 ```sh
 # 检查包
