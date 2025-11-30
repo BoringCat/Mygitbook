@@ -70,8 +70,9 @@ curl -sfL https://get.k3s.io | K3S_TOKEN=${TOKEN}\
    ```sh
    helm install cilium cilium/cilium --version 1.18\
        --namespace kube-system\
+       --set k8sServiceHost=${第一个节点IP}\
+       --set k8sServicePort=6443\
        --set ipam.operator.clusterPoolIPv4PodCIDRList="10.42.0.0/16"\
-       --set routingMode=native\
        --set bpf.datapathMode=netkit\
        --set bpf.masquerade=true\
        --set bpf.distributedLRU.enabled=true\
@@ -79,25 +80,24 @@ curl -sfL https://get.k3s.io | K3S_TOKEN=${TOKEN}\
        --set ipv4.enabled=true\
        --set enableIPv4BIGTCP=true\
        --set kubeProxyReplacement=true\
-       --set bpfClockProbe=true\
-       --set ipv4NativeRoutingCIDR="10.42.0.0/16"
+       --set bpfClockProbe=true
    ```
 
    每一项的作用
 
-   | 项目                                       | 作用                                        |
-   | :----------------------------------------- | :------------------------------------------ |
-   | `ipam.operator.clusterPoolIPv4PodCIDRList` | 设定集群的Pod地址池与K3s配置一致            |
-   | `routingMode=native`                       | 使用原生路由模式                            |
-   | `bpf.datapathMode=netkit`                  | 使用 [netkit](https://www.netkit.org/) 网卡 |
-   | `bpf.masquerade`                           | 使用 eBPF 来做 NAT                          |
-   | `bpf.distributedLRU.enabled`               | 启用分布式 LRU 后端内存                     |
-   | `bpf.mapDynamicSizeRatio`                  | 设定动态映射内存百分比                      |
-   | `ipv4.enabled`                             | 启用IPv4                                    |
-   | `enableIPv4BIGTCP`                         | 开启IPv4高吞吐能力                          |
-   | `kubeProxyReplacement`                     | 替代 kube-proxy                             |
-   | `bpfClockProbe`                            | 启用 eBPF 时钟源探测                        |
-   | `ipv4NativeRoutingCIDR`                    | 设定可以路由的IPv4地址段                    |
+   | 项目                                       | 作用                                                              |
+   | :----------------------------------------- | :---------------------------------------------------------------- |
+   | `k8sServiceHost`                           | 指定 K8s API 服务地址                                             |
+   | `k8sServicePort`                           | 指定 K8s API 服务端口                                             |
+   | `ipam.operator.clusterPoolIPv4PodCIDRList` | 设定集群的Pod地址池与K3s配置一致                                  |
+   | `bpf.datapathMode=netkit`                  | 使用 [netkit](https://www.netkit.org/) 网卡<br/>需要Kernel >= 6.8 |
+   | `bpf.masquerade`                           | 使用 eBPF 来做 NAT                                                |
+   | `bpf.distributedLRU.enabled`               | 启用分布式 LRU 后端内存                                           |
+   | `bpf.mapDynamicSizeRatio`                  | 设定动态映射内存百分比                                            |
+   | `ipv4.enabled`                             | 启用IPv4                                                          |
+   | `enableIPv4BIGTCP`                         | 开启IPv4高吞吐能力                                                |
+   | `kubeProxyReplacement`                     | 替代 kube-proxy                                                   |
+   | `bpfClockProbe`                            | 启用 eBPF 时钟源探测                                              |
 4. 等待完成
 
 ## 用
