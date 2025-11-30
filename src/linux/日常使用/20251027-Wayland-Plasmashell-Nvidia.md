@@ -18,8 +18,10 @@ Qt 版本： 6.10.0
 
 ## 2. 方法
 ~/.config/systemd/user/plasma-plasmashell.service.d/override.conf
-```conf
+```ini
 [Service]
 Environment=__EGL_VENDOR_LIBRARY_FILENAMES=/usr/share/glvnd/egl_vendor.d/50_mesa.json
 Environment=__GLX_VENDOR_LIBRARY_NAME=mesa
 ```
+### 缺点
+- 无法获取窗口预览图

@@ -21,6 +21,7 @@
    - [K8s](linux/Kubernetes/README.md)
       - [权限与用户](linux/Kubernetes/权限与用户.md)
       - [OKG(OpenKruiseGame)](linux/Kubernetes/OpenKruiseGame.md)
+      - [在k3s中安装cilium并使用eBPF路由](linux/Kubernetes/20251130-在k3s中安装cilium并使用eBPF路由.md)
 - [NAS的一些记录](HomeNetwork/NAS/README.md)
    - [群晖](HomeNetwork/NAS/DSM/README.md)
       - [改群晖DSM的默认端口](HomeNetwork/NAS/DSM/ChangeSynologyNginxPoint.md)

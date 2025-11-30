@@ -9,7 +9,7 @@
 
 ## 配置Bitwarden为系统SSH Agnet
 1. 设置里开启  
-   ![启用SSH Agent](/assets/linux/20251027-Bitwarden启用SSHAgent.png)
+   ![启用SSH Agent](../assets/linux/20251027-Bitwarden启用SSHAgent.png)
 2. 配置环境变量
    - rc文件
      ```sh
