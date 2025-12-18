@@ -23,7 +23,7 @@ Network ---> simple-obfs
 LuCI ---> 3. Applications ---> luci-app-shadowsocks  
 **注：LEDE自带 luci-app-shadowsocks-libev 和 luci-app-shadowsocks-without-ipset**
 
-将其设定为 '<m>' 编译为ipk，或 '<\*>' 安装到编译出的固件中。
+将其设定为 '&lt;m&gt;' 编译为ipk，或 '<\*>' 安装到编译出的固件中。
 
 4. 若是从SDK中编译，  
 输入`make package/shadowsocks-libev/compile V=s`编译 shadowsocks-libev 与 shadowsocks-libev-server 包。  
