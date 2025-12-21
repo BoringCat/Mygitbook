@@ -4,7 +4,7 @@
 - [搞运维](linux/README.md)
    - [K8s](linux/Kubernetes/README.md)
       - [权限与用户](linux/Kubernetes/权限与用户.md)
-      - [OKG(OpenKruiseGame)](linux/Kubernetes/OpenKruiseGame.md)
+      - [OKG(OpenKruiseGame)](linux/Kubernetes/20251221-OpenKruiseGame.md)
       - [在k3s中安装cilium并使用eBPF路由](linux/Kubernetes/20251130-在k3s中安装cilium并使用eBPF路由.md)
    - [Nginx充当镜像源](linux/日常使用/20251027-Nginx充当镜像源.md)
    - [解决Wayland下Plasmashell经常卡死的问题](linux/日常使用/20251027-Wayland-Plasmashell-Nvidia.md)
