@@ -9,13 +9,17 @@ src = "src"
 command = "mdbook-last-changed"
 renderer = ["html"]
 
+[preprocessor.mermaid]
+command = "mdbook-mermaid"
+
 [output.html]
 default-theme = "Rust"
-preferred-dark-theme = "Ayu"
+preferred-dark-theme = "Navy"
 git-repository-url = "https://github.com/boringcat/Mygitbook"
 no-section-label = true
 additional-css = ["css/custom.css"]
 input-404 = "哦吼.md"
+additional-js = ["js/mermaid.min.js", "js/mermaid-init.js"]
 
 [output.html.print]
 enable = false    # include support for printable output
