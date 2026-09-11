@@ -22,7 +22,7 @@ git-repository-url = "https://github.com/boringcat/Mygitbook"
 no-section-label = true
 additional-css = ["css/custom.css"]
 input-404 = "哦吼.md"
-additional-js = ["js/mermaid.min.js", "js/mermaid-init.js"]
+additional-js = ["js/mermaid.min.js", "js/mermaid-init.js", "js/external-links.js"]
 
 [output.html.print]
 enable = false    # include support for printable output
