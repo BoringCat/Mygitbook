@@ -31,6 +31,8 @@
       - [解决 Container Station3 LXD权限问题](HomeNetwork/NAS/QNAP/ContainerStation3-LXD权限问题.md)
       - [磁盘休眠系列问题](HomeNetwork/NAS/QNAP/20260331-磁盘休眠系列问题.md)
       - [一些使用优化](HomeNetwork/NAS/QNAP/20260331-一些使用优化.md)
+- [搞开发](program/README.md)
+  - [Python/UV包管理器使用经验](program/python/UV包管理器使用经验.md)
 - [折腾光猫](HomeNetwork/Telecom/README.md)
    - [电信天翼宽带家庭网关破解](HomeNetwork/Telecom/Hack_To_Telecom_device.md)
 - [搞LEDE](lede/README.md)
