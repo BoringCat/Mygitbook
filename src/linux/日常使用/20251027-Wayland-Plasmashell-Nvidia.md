@@ -14,14 +14,12 @@ Qt 版本： 6.10.0
 
 
 ## 1. 原因
-**So NVIDIA......**
+你可能是 X11+NVIDIA<555 的受害者，并且参考了[Wiki的内容](https://wiki.archlinuxcn.org/wiki/NVIDIA#TwinView_%E5%92%8C%E5%9E%82%E7%9B%B4%E5%90%8C%E6%AD%A5)配置了以下环境变量
+```bash
+export __GL_SYNC_TO_VBLANK=1
+export __GL_SYNC_DISPLAY_DEVICE=DP-0
+export VDPAU_NVIDIA_SYNC_DISPLAY_DEVICE=DP-0
+```
 
 ## 2. 方法
-~/.config/systemd/user/plasma-plasmashell.service.d/override.conf
-```ini
-[Service]
-Environment=__EGL_VENDOR_LIBRARY_FILENAMES=/usr/share/glvnd/egl_vendor.d/50_mesa.json
-Environment=__GLX_VENDOR_LIBRARY_NAME=mesa
-```
-### 缺点
-- 无法获取窗口预览图
+从 `/etc/environment` `/etc/bash.bashrc` 等地方移除这些环境变量
