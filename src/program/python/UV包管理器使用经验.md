@@ -3,6 +3,7 @@
 - [打包](#打包)
   - [Docker](#docker)
     - [优化层大小](#优化层大小)
+  - [云函数等](#云函数等)
 - [坑](#坑)
     - [uv.lock记录安装镜像源](#uvlock记录安装镜像源)
 
@@ -93,6 +94,8 @@ RUN --mount=type=cache,target=/root/.cache/uv\
 
 </details>
 
+<br/>
+
 这样子打出来镜像就会有
 | 层 | 大小 |
 | --- | --- |
@@ -101,6 +104,8 @@ RUN --mount=type=cache,target=/root/.cache/uv\
 | 代码 | 🤏 |
 
 并且更新只需要更新代码即可
+
+<br/>
 
 如果是带前端的包，可以在字节码后面插入前端制品，取决于哪个变化概率比较大
 | 层 | 大小 |
@@ -111,10 +116,140 @@ RUN --mount=type=cache,target=/root/.cache/uv\
 | 代码 | 🤏 |
 
 
+### 云函数等
+我的习惯是使用docker打包，可以避免一堆权限/路径/依赖问题
+
+```bash
+docker build --output . .
+```
+
+<details>
+<summary>Dockerfile</summary>
+
+```dockerfile
+# 1. 定义 uv 包镜像，指定版本
+ARG UV_VERSION=0.12.6
+FROM ghcr.io/astral-sh/uv:${UV_VERSION} AS uv
+
+# 2. 定义运行时版本，建议从云函数编辑界面看/etc/os-relases，选用对应的版本
+FROM centos:7 AS builder
+SHELL [ "/bin/bash", "-euo", "pipefail", "-c" ]
+WORKDIR /app
+
+## 定义Python版本
+ARG PYTHON_VERSION=3.9
+ENV UV_LINK_MODE=copy UV_COMPILE_BYTECODE=0 UV_NO_DEV=1 UV_PYTHON=${PYTHON_VERSION}
+
+# 3. 拷贝项目描述文件进去
+COPY --from=uv /uv /uvx /bin/
+COPY pyproject.toml README.md /app
+
+# 4. 创建依赖文件并使用pip安装到 dist 目录
+## 一些不能依赖动态链接的包需要安装二进制包，例如 cryptography 
+RUN --mount=type=cache,target=/root/.cache/uv\
+    --mount=type=cache,target=/root/.local/share/uv/python\
+    set -x\
+ && export UV_DEFAULT_INDEX UV_SYSTEM_CERTS\
+ && uv export --format requirements.txt --no-dev --emit-index-url --no-editable --no-install-project > /tmp/requirements.txt\
+ && uv pip install -r /tmp/requirements.txt -t /app/dist/ --only-binary cryptography,cffi,pycparser
+
+# 5. 将代码完整拷贝到 dist 目录
+## 因为一些云函数不支持调用包的函数，建议在src目录放一个 index.py 或 entrypoint.py 充当入口函数
+COPY src/ /app/dist/
+
+# 6. 打zip包
+RUN set -x\
+ && cd /app/dist/\
+ && zip -9 -r /scf.zip . -x '**/__pycache__/**' -x '**/__pycache__/' -x '__pycache__/**' -x '__pycache__/'
+
+# 7. 输出zip包
+FROM scratch AS binaries
+COPY --from=packager /scf.zip /
+```
+
+</details>
+
+<br/>
+
+另外还可以基于 `pyproject.toml` 的 `[dependency-groups]` 块，分层打包
+
+例如：
+```toml
+[dependency-groups]
+es = [
+    "aiohttp~=3.9.5",
+    "aiosignal~=1.3.1",
+    "async-timeout~=4.0.3",
+    "attrs~=23.2.0",
+    "certifi~=2024.6.2",
+    "elasticsearch[async]~=7.16.2",
+    "frozenlist~=1.4.1",
+    "idna~=3.7",
+    "multidict~=6.0.5",
+    "urllib3~=1.26.19",
+    "yarl~=1.9.4",
+]
+```
+
+```bash
+docker build -f layout.dockerfile --build-args LAYOUT=es --output . .
+```
+
+<details>
+<summary>layout.dockerfile</summary>
+
+```dockerfile
+# 1. 定义 uv 包镜像，指定版本
+ARG UV_VERSION=0.12.6
+FROM ghcr.io/astral-sh/uv:${UV_VERSION} AS uv
+
+# 2. 定义运行时版本，建议从云函数编辑界面看/etc/os-relases，选用对应的版本
+FROM centos:7 AS builder
+SHELL [ "/bin/bash", "-euo", "pipefail", "-c" ]
+WORKDIR /app
+## 一些发行版可能没有默认安装zip，需要手动安装或使用python打包
+RUN --mount=type=cache,target=/var/cache\
+ && yum install -y zip\
+
+## 定义Python版本
+ARG PYTHON_VERSION=3.9
+ENV UV_LINK_MODE=copy UV_COMPILE_BYTECODE=0 UV_NO_DEV=1 UV_PYTHON=${PYTHON_VERSION}
+
+# 3. 拷贝项目描述文件进去
+COPY --from=uv /uv /uvx /bin/
+COPY pyproject.toml README.md /app
+
+# 4. 创建层的依赖文件并使用pip安装到 dist 目录
+## 一些不能依赖动态链接的包需要安装二进制包，例如 cryptography 
+ARG LAYOUT
+RUN --mount=type=cache,target=/root/.cache/uv\
+    --mount=type=cache,target=/root/.local/share/uv/python\
+    set -x\
+ && export UV_DEFAULT_INDEX UV_SYSTEM_CERTS\
+ && uv export --format requirements.txt --only-group "${LAYOUT}" --no-dev --emit-index-url --no-editable --no-install-project > /tmp/requirements.txt\
+ && uv pip install -r /tmp/requirements.txt -t /app/dist/ --only-binary cryptography,cffi,pycparser
+
+# 5. 打zip包
+## 分开是为了在改zip参数的时候不需要重新安装
+ARG LAYOUT
+RUN set -x\
+ && cd /app/dist/\
+ && zip -9 -r /layout-${LAYOUT}.zip . -x '**/__pycache__/**' -x '**/__pycache__/' -x '__pycache__/**' -x '__pycache__/'
+
+# 6. 输出zip包
+FROM scratch AS binaries
+ARG LAYOUT
+COPY --from=packager /layout-${LAYOUT}.zip /
+```
+
+</details>
+
 ## 坑
 #### uv.lock记录安装镜像源
 
 当你使用 `UV_DEFAULT_INDEX` 环境变量或者 `uv.toml` 配置文件改变 `index-url` 配置时，uv 会将这个 `index-url` 记录到 lock 文件中，并在下一次执行 `sync --locked` 或 `sync --frozen` 的时候直接使用 lock 文件中的 `index-url`
+
+<br/>
 
 <details>
 <summary>示例文件</summary>
@@ -137,6 +272,7 @@ wheels = [
 
 </details>
 
+<br/>
 
 正常情况下没有问题，只要你是用的公共镜像源能在任意位置访问就行。但下面的场景就会造成问题
 - 使用的是内网自建缓存（我），但 Runner 不在内网
